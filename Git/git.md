@@ -2,7 +2,7 @@
 
 **Resources**
 
-http://git-scm.com/book/en
+[Git](http://git-scm.com/book/en)
 
 **Goals**
 
@@ -32,16 +32,13 @@ So how do you collaborate in software projects, what are some useful workflows a
 
 **git**
 
-git is a version control system
+	git is a version control system
 
 **github**
 
 It's a social network build around git. I has has completely changed the way we, as programmers, work. GitHub is now the largest online storage space of collaborative works.
 
 **git and github together is a distributed version control system**
-
-PIC: Distribute Version Control System
-http://git-scm.com/figures/18333fig0103-tn.png
 
 git is local (Computer A). Nearly every operation is local. Most operations in Git only need local files and resources to operate — generally no information is needed from another computer on your network. **Advantage?**
 
@@ -51,30 +48,28 @@ Github is the "Server Computer" and more, as we will see.
 
 Check that git is installed
 
-  git --version
+  	git --version
 
 Let's put yesterday's lab code under git. For example, I put mine here:
 
-  cd ~/Code/wk1d1
+  	cd ~/Code/wk1d1
 
 The first step is creating a version database, a repository
 
-  git init
+  	git init
 
 Now add files to the repo - this is also called staging. You can add files individually or the entire directory (includes sub dirs)
 
-  git add guessing_game.rb (add just a single file)
-  git add . (to add everything in the directory)
+  	git add guessing_game.rb (add just a single file)
+  	git add . (to add everything in the directory)
 
 The files and folders are now under git management, or tracked.
 
 Let's say you're done for now and want to save a version.
 
-  git commit -m 'initial commit'
+  	git commit -m 'initial commit'
 
 **Let's look of what we did**
-
-PIC: http://git-scm.com/figures/18333fig0106-tn.png
 
 - working directory; that's root folder of your project
 - staging area: now file is tracked in git
@@ -82,15 +77,15 @@ PIC: http://git-scm.com/figures/18333fig0106-tn.png
 
 Now let's go and change a file … mess it up! Check status:
 
-  git status <file>
+  	git status <file>
 
 check differences, what changed since last commit
 
-  git diff <file>
+  	git diff <file>
 
 How to we revert to a working version?
   
-  git checkout <file>
+  	git checkout <file>
 
 Now make a real change that you want to keep.
 
@@ -98,11 +93,11 @@ Now make a real change that you want to keep.
 
 Now stage change (note: you use it to begin tracking new files or to stage files)
 
-  git add <file>
+  	git add <file>
 
 Commit first change - Now that your staging area is set up the way you want it, you can commit your changes. Remember that anything that is still unstaged — any files you have created or modified that you haven’t run git add on since you edited them
 
-  git commit -m 'comment' (commits only what was staged with git add)
+  	git commit -m 'comment' (commits only what was staged with git add)
 
 **Note Staging is optional**: Although it can be amazingly useful for crafting commits exactly how you want them, the staging area is sometimes a bit more complex than you need in your workflow. If you want to skip the staging area, Git provides a simple shortcut. Providing the -a option to the git commit command makes Git automatically stage every file that is already tracked before doing the commit, letting you skip the git add part.
 
@@ -110,34 +105,31 @@ Commit first change - Now that your staging area is set up the way you want it, 
 
 Let's try this out. Make change and not stage it with add, but commit with -a option.
 
-  git commit -a  -m 'comment' //includes staging step **OR**
-  git commit -m 'comment' <file> or . //omits  staging step entirely
+  	git commit -a  -m 'comment' //includes staging step **OR**
+  	git commit -m 'comment' <file> or . //omits  staging step entirely
 
 check log - shows the version history, let's take a look
 
-  git log <file>
+  	git log <file>
 
 getting help
 
-  git help <command> - super useful
+  	git help <command> - super useful
 
 **My personal workflow usually looks like**
 
 - Do some programming.
-- git status <file> or . to see what files I changed.
-- git diff <file> or . to see exactly what I modified.
-- git commit -m 'message' <file> or . to commit
-
-PIC: here's an overview of all file states:
-http://git-scm.com/figures/18333fig0201-tn.png
+	- git status <file> or . to see what files I changed.
+	- git diff <file> or . to see exactly what I modified.
+	- git commit -m 'message' <file> or . to commit
 
 Remember that each file in your working directory can be in one of two states: tracked or untracked. Tracked files are files that were in the last snapshot; they can be unmodified, modified, or staged. Untracked files are everything else
 
 We omitted the delete feature, let's do:
 
-  touch abc.txt
-  git rm abc.txt
-  git commit -a -m'deleted file'
+  	touch abc.txt
+  	git rm abc.txt
+  	git commit -a -m'deleted file'
 
 
 ##Github
@@ -166,7 +158,7 @@ Ok, good to go.
 
 Create repo, name it 'week1day1' (for example)
 
-  git remote add origin git@github.com:aikalima/week1day1.git
+  	git remote add origin git@github.com:aikalima/week1day1.git
 
 Reads: *Connect the remote repository week1day1 with my local workspace, where it shall be known as 'origin'*
 
@@ -175,22 +167,22 @@ Push changes to remote/github - you may have to authenticate.
 Note: you can setup password caching see
 https://help.github.com/articles/set-up-git
 
-  git push origin master
+	  git push origin master
 
 Reads: *Upload what is in my local repository (master) to github (origin)*
 
 Check if changes made it to github. Now make a local change. **5 min**
 
-  make change
-  git commit -m 'my comment' .
-  git push origin master
+  	make change
+	git commit -m 'my comment' .
+	git push origin master
 
 Did change make it to remote?
 
 Try cloning a repo. cd into /tmp direcory.
 
-  cd /tmp
-  git clone … (grab url from git repo page, either SSH or HTTPS)
+  	cd /tmp
+	git clone … (grab url from git repo page, either SSH or HTTPS)
 
 ##Branching
 
@@ -200,16 +192,16 @@ Use case: Let's say you need to work on a larger feature that takes about a week
 
 List of branches:
 
-  git branch -av
+  	git branch -av
 
 Just like in a tree, you can create a branch off an existing branch.
 
-  git branch development
+	git branch development
 
 Now that a new branch has been created, let’s move to it.
 
-  git checkout development
-  git checkout -b development (create and switch at the same time)
+  	git checkout development
+  	git checkout -b development (create and switch at the same time)
 
 Notice that the branch has changed. What was in master? Your files should also show up in the development branch because it was branched from the master. Check it using ls.
 
@@ -219,19 +211,19 @@ Commit the change and check git status.
 
 If clean, switch back to 'master'
 
-  git checkout master
+  	git checkout master
 
 Now that we are back in master, we have to merge the changes form the dev branch back to master. Remember, master is our production branch, we always push to github from master.
 
 check which branch you are in:
 
-  git branch
+  	git branch
 
 now merge development branch:
 
-  git merge development
+  	git merge development
 
-This should succeed (happy path). Now that master is clean, push it to github.
+This should succeed (happy path). Now that master is clean, push it to Github.
 
 Note: for lab assignments and mini projects, using branches is overkill. It's fine to work in the master branch. However, when you get to larger projects, branches become your friend.
 
@@ -249,33 +241,34 @@ A makes B collaborator on their repository
 
 B clones repository of A on to their local machine
 
-  git clone <repo>  -> first pull from github
+  	git clone <repo>  -> first pull from github
 
 B makes a change
 
-  git commit -m'a comment' <file>  -> updates git
-  git status <file>
-  git push origin master  -> updates github repo
+  	git commit -m'a comment' <file>  -> updates git
+  	git status <file>
+  	git push origin master  -> updates github repo
 
 A picks up changes
 
-  git pull origin master  -> pulls from github repo
+  	git pull origin master  -> pulls from github repo
 
 ## Afternoon lab - githug
 
 Setup password caching, also an exercise in command line usage:
 
-  https://help.github.com/articles/set-up-git
+  [Set Up Git](https://help.github.com/articles/set-up-git)
 
 Interactive github tutorial, githug. Find it on github, clone, follow install instructions:
 
-  githug
+  	githug
 
 You may encounter some new commands that we didn't have time to cover, for example:
 
-tag / stash …  look it up, google.
+	tag / stash …  look it up, google.
 
 
 ####Labs
 Lab 1: https://gist.github.com/neurosaurus/2b5013313c2fa28eab89
+
 Lab 2: https://github.com/wdi-sf-july/git_clone_lab
