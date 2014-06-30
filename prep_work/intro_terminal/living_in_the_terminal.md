@@ -216,13 +216,7 @@ You might have noticed that the prompt changed from `[tripta:/]$` to `[tripta:~]
 
 The `~` always refers to the current user's home directory, this is handy for scripts and for you, but you can use the full path just as well if you know it, `pwd` will give you the full path
 
-##Absolute and Relative Paths
-Go to you home directory with `cd ~` and __Try this now__
-
-	cd ./
-
-What happened? Which directory are you in?
-
+##Relative Paths
 Try this
 
 	cd ../
@@ -230,11 +224,9 @@ Try this
 
 What happened? Which directory are you in?
 
-
-* `./` prefixes paths relative to the current directory
 * `../` prefixes paths relative to the parent directory
 
-These  (`./` and `../`) are __relative paths__ and you can use them anywhere you would use a path
+`../`) is a __relative paths__ and you can use it anywhere you would use a path
 
 	[tripta:~]$ ls -al ../Guest
   
@@ -266,7 +258,7 @@ __Exercise: 5 minutes in Pairs__
 
 ##Mini Review - Navigating Around
 * root directory `/`
-* `./` and `../`
+* `../`
 * Absolute and Relative Paths
 * Tab Completion
 
@@ -439,7 +431,7 @@ What have we been up to?
   * `ls`,`pwd`, commands
   * Root Directory
   * `cd`  
-  * Absolute and Relative Paths
+  * Relative Paths
   * Tab Completion
   * `mkdir`
   * echo, Redirection and Piping
