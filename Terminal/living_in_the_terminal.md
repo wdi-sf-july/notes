@@ -70,9 +70,10 @@ Typically the shell will start in your `HOME` directory, each user has their own
 __Follow Along:__
 
   [tripta:~]$ pwd
-  /Users/tripta
   
-For me this is `Users/tripta`, what is the __current working directory__ of your shell process? 
+  /Users/triptagupta
+  
+For me this is `Users/triptagupta`, what is the __current working directory__ of your shell process? 
 
 Wherever we are, `pwd`, short for __print working directory__, will show us what directory we are in.
 
