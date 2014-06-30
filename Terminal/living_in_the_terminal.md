@@ -54,7 +54,7 @@ Although they technically mean slightly different things, the following terms ar
 __Follow Along:__
 
 1.  In the top right of the screen click the Magnifing Glass icon to bring up 'Spotlight' and type 'Terminal'
-2.  Once Terminal starts locatte the icon in the doc and select `Options->Keep In Dock` so that it's always handy
+2.  Once Terminal starts locate the icon in the doc and select `Options->Keep In Dock` so that it's always handy
 
 
 #<a name="current"></a>Current Working Directory
@@ -66,9 +66,9 @@ Typically the shell will start in your `HOME` directory, each user has their own
 
 __Follow Along:__
 
-  [tripta:~]$ pwd
-  
-  /Users/triptagupta
+	  [tripta:~]$ pwd
+	  
+	  /Users/triptagupta
   
 For me this is `Users/triptagupta`, what is the __current working directory__ of your shell process? 
 
@@ -76,7 +76,8 @@ Wherever we are, `pwd`, short for __print working directory__, will show us what
 
 __Follow Along:__
 
-  [tripta:~]$ open .
+	[tripta:~]$ open .
+  
 Wherever we are, `open .`, opens a `Finder` window in the current directory, this can be handy sometimes
 
    
@@ -85,21 +86,21 @@ What can we find out about the  __current working directory__ ?
 
 One of the most useful commands is:
 
+	[tripta:~]$ ls 
 
-  [tripta:~]$ ls 
-
-Which **lists the files and directories in the current working directory:
+Which lists the files and directories in the current working directory:
 
 
-  [tripta:~]$ ls 
-  Applications  Justinmind  Pictures  gitshell.sh rorshell.sh
-  Desktop   Library   Public    hashes  rorshellws.sh
-  Documents Movies    bin   helloroom work
-  Downloads Music   git_profile.sh  phpshell.sh
+	  [tripta:~]$ ls 
+	  
+	  Applications   Pictures  gitshell.sh rorshell.sh
+	  Desktop   Library   Public    hashes  rorshellws.sh
+	  Documents Movies    bin   helloroom work
+	  Downloads Music   git_profile.sh  phpshell.sh
 
 Personally I find this a little difficult to read so I use the long form:
 
-  [tripta:~]$ ls -l
+	[tripta:~]$ ls -l
   
 	  total 48
 	  drwxr-xr-x    2 tripta  staff    68 Dec  4 15:13 Applications
@@ -126,7 +127,7 @@ Now I can see a lot more clearly what files are in my current working directory.
 
 The ls command can take a directory as an argument
 
-  [tripta:~]$ ls -l Documents/
+	[tripta:~]$ ls -l Documents/
 
 	  total 40360
 	  drwxr-xr-x   4 tripta  staff      136 Feb 22 20:01 Rails
@@ -135,15 +136,15 @@ The ls command can take a directory as an argument
 
 The ls command can also take a wildcard as an argument
 
-  [tripta:~]$ ls -l Documents/*.png
+	[tripta:~]$ ls -l Documents/*.png
   
   	-rw-r--r--@ 1 tripta  staff  8154896 Feb 27 10:57 Documents/Profile.png
-	  -rw-r--r--@ 1 tripta  staff  6258658 Feb 27 10:57 Documents/Profile2.png
+	-rw-r--r--@ 1 tripta  staff  6258658 Feb 27 10:57 Documents/Profile2.png
 
 ##Hidden Files
 Have you ever heard of `hidden files`? Well it's true, they are real! and we can see them:
 
-  [tripta:~]$ ls -la
+	[tripta:~]$ ls -la
  	
  	total 368
 	  drwxr-xr-x+  76 tripta  staff   2584 Apr  6 10:30 .
@@ -218,14 +219,14 @@ The `~` always refers to the current user's home directory, this is handy for sc
 ##Absolute and Relative Paths
 Go to you home directory with `cd ~` and __Try this now__
 
-  cd ./
+	cd ./
 
 What happened? Which directory are you in?
 
 Try this
 
-  cd ../
-  pwd
+	cd ../
+	pwd
 
 What happened? Which directory are you in?
 
@@ -235,18 +236,19 @@ What happened? Which directory are you in?
 
 These  (`./` and `../`) are __relative paths__ and you can use them anywhere you would use a path
 
-  [tripta:~]$ ls -al ../Guest
-  total 0
-  drwxr-xr-x+ 11 Guest  _guest  374 Nov  4 10:47 .
-  drwxr-xr-x   6 root   admin   204 Nov  4 10:47 ..
-  drwx------+  3 Guest  _guest  102 Nov  4 10:47 Desktop
-  drwx------+  3 Guest  _guest  102 Nov  4 10:47 Documents
-  drwx------+  4 Guest  _guest  136 Nov  4 10:47 Downloads
-  drwx------+ 26 Guest  _guest  884 Nov  4 10:47 Library
-  drwx------+  3 Guest  _guest  102 Nov  4 10:47 Movies
-  drwx------+  3 Guest  _guest  102 Nov  4 10:47 Music
-  drwx------+  3 Guest  _guest  102 Nov  4 10:47 Pictures
-  drwxr-xr-x+  4 Guest  _guest  136 Nov  4 10:47 Public
+	[tripta:~]$ ls -al ../Guest
+  
+	  total 0
+	  drwxr-xr-x+ 11 Guest  _guest  374 Nov  4 10:47 .
+	  drwxr-xr-x   6 root   admin   204 Nov  4 10:47 ..
+	  drwx------+  3 Guest  _guest  102 Nov  4 10:47 Desktop
+	  drwx------+  3 Guest  _guest  102 Nov  4 10:47 Documents
+	  drwx------+  4 Guest  _guest  136 Nov  4 10:47 Downloads
+	  drwx------+ 26 Guest  _guest  884 Nov  4 10:47 Library
+	  drwx------+  3 Guest  _guest  102 Nov  4 10:47 Movies
+	  drwx------+  3 Guest  _guest  102 Nov  4 10:47 Music
+	  drwx------+  3 Guest  _guest  102 Nov  4 10:47 Pictures
+	  drwxr-xr-x+  4 Guest  _guest  136 Nov  4 10:47 Public
 
 
 ## Tab Completion
@@ -301,7 +303,7 @@ What command can you use to see the results of you handywork?
 Let's `cd` into our new `living_room`  Look around with `ls`, and `ls -la`.  What do you see?
 
 __Exercise__
-I want my living room to have a bookshelf full of books.  Let's make a file that lists all of our books.  Type `subl books.txt` to open Sublime Text editing a new file called `books.txt`.  Add a few books, copy and paste the section below so we all have some books in common, and save the file.  Make sure the books you add are in the same format:  `<author_given_name>, <author_last_name>:<title>`.
+I want my living room to have a bookshelf full of books.  Let's make a file that lists all of our books.  Open Sublime Text and make a new file called `books.txt` and save them on your Desktop.  Add a few books, copy and paste the section below so we all have some books in common, and save the file.  Make sure the books you add are in the same format:  `<author_given_name>, <author_last_name>:<title>`.
 
 ```
 Carroll, Lewis:Through the Looking-Glass
@@ -450,13 +452,13 @@ For any command we discuss here, the command `man`, short for __manual__, will g
 
 Many advanced commands also accept the --help option, but not all, but if you get stuck it can be worth a try. Most of the commands covered in this simple overview do not support this feature
 
-  $ git --help
-  
-  usage: git [--version] [--help] [-C <path>] [-c name=value]
-           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
-           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
-           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
-           <command> [<args>]
+	  $ git --help
+	  
+	  usage: git [--version] [--help] [-C <path>] [-c name=value]
+	           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+	           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
+	           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+	           <command> [<args>]
 
 __Note:__ In documentation we often see a `#` or a `$` prefix before code examples, these characters are used to indicate that the example is a something which is executed in the terminal (as opposed to being a code sample) and usually these are not supposed to be entered when you execute a command. 
 
@@ -479,11 +481,6 @@ When a bash shell starts, some (usually hidden) files are automatically read to 
 
 * `cat ~/.bash_profile`
 
-### Set your default editor
-Just made a git commit without a comment? You may find yourself in `vi` hell. You can avoid this by setting your default editor in your `~/.bash_profile`
-
-* `export EDITOR='subl -w'`
-
 ### Different Types of Shell
 You'll mostly be using `bash` as your shell, but there are other similiar programs which you may see at work
 
@@ -494,7 +491,6 @@ You'll mostly be using `bash` as your shell, but there are other similiar progra
 * Add tab completion for git commands and branch names, try these instructions:
   [http://bit.ly/gitprompt](http://bit.ly/gitprompt)
   
-
 
 ## Further Reading
 Linux is almost the same as OSX, and this is a great manual about the Linux command line:
