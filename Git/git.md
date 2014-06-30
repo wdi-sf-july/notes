@@ -50,10 +50,6 @@ Check that git is installed
 
   	git --version
 
-Let's put yesterday's lab code under git. For example, I put mine here:
-
-  	cd ~/Code/wk1d1
-
 The first step is creating a version database, a repository
 
   	git init
