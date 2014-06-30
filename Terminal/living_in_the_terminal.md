@@ -91,7 +91,7 @@ One of the most useful commands is:
 
   [tripta:~]$ ls 
 
-Which **l**i**s**ts the files and directories in the current working directory:
+Which **lists the files and directories in the current working directory:
 
 
   [tripta:~]$ ls 
@@ -102,78 +102,81 @@ Which **l**i**s**ts the files and directories in the current working directory:
 
 Personally I find this a little difficult to read so I use the long form:
 
-  [sttripta:~]$ ls -l
-  total 48
-  drwxr-xr-x    2 tripta  staff    68 Dec  4 15:13 Applications
-  drwx------+   6 tripta  staff   204 Mar 23 18:20 Desktop
-  drwx------+  11 tripta  staff   374 Feb 27 10:57 Documents
-  drwx------+ 141 tripta  staff  4794 Apr  5 08:04 Downloads
-  drwxr-xr-x    3 tripta  staff   102 Nov 12 13:56 Justinmind
-  drwx------@  56 tripta  staff  1904 Apr  4 21:58 Library
-  drwx------+   3 tripta  staff   102 Nov  4 10:49 Movies
-  drwx------+   8 tripta  staff   272 Mar  5 15:48 Music
-  drwx------+  20 tripta  staff   680 Mar 23 12:53 Pictures
-  drwxr-xr-x+   5 tripta  staff   170 Nov  4 10:49 Public
-  drwxr-xr-x    3 tripta  staff   102 Jan 31 13:21 bin
-  -rwxr-xr-x    1 tripta  staff   184 Nov  8 16:41 git_profile.sh
-  -rw-r--r--    1 tripta  staff   327 Mar 27 09:22 gitshell.sh
-  drwxr-xr-x   22 tripta  staff   748 Feb  3 15:15 hashes
-  drwxr-xr-x    3 tripta  staff   102 Apr  1 10:34 helloroom
-  -rwxr-xr-x    1 tripta  staff   409 Nov 15 12:13 phpshell.sh
-  -rwxr-xr-x    1 tripta  staff   299 Jan 31 13:27 rorshell.sh
-  -rwxr-xr-x    1 tripta  staff   316 Feb  2 10:35 rorshellws.sh
-  lrwxr-xr-x    1 tripta  staff     5 Nov  7 18:22 work -> /work
+  [tripta:~]$ ls -l
+  
+	  total 48
+	  drwxr-xr-x    2 tripta  staff    68 Dec  4 15:13 Applications
+	  drwx------+   6 tripta  staff   204 Mar 23 18:20 Desktop
+	  drwx------+  11 tripta  staff   374 Feb 27 10:57 Documents
+	  drwx------+ 141 tripta  staff  4794 Apr  5 08:04 Downloads
+	  drwxr-xr-x    3 tripta  staff   102 Nov 12 13:56 Justinmind
+	  drwx------@  56 tripta  staff  1904 Apr  4 21:58 Library
+	  drwx------+   3 tripta  staff   102 Nov  4 10:49 Movies
+	  drwx------+   8 tripta  staff   272 Mar  5 15:48 Music
+	  drwx------+  20 tripta  staff   680 Mar 23 12:53 Pictures
+	  drwxr-xr-x+   5 tripta  staff   170 Nov  4 10:49 Public
+	  drwxr-xr-x    3 tripta  staff   102 Jan 31 13:21 bin
+	  -rwxr-xr-x    1 tripta  staff   184 Nov  8 16:41 git_profile.sh
+	  -rw-r--r--    1 tripta  staff   327 Mar 27 09:22 gitshell.sh
+	  drwxr-xr-x   22 tripta  staff   748 Feb  3 15:15 hashes
+	  drwxr-xr-x    3 tripta  staff   102 Apr  1 10:34 helloroom
+	  -rwxr-xr-x    1 tripta  staff   409 Nov 15 12:13 phpshell.sh
+	  -rwxr-xr-x    1 tripta  staff   299 Jan 31 13:27 rorshell.sh
+	  -rwxr-xr-x    1 tripta  staff   316 Feb  2 10:35 rorshellws.sh
+	  lrwxr-xr-x    1 tripta  staff     5 Nov  7 18:22 work -> /work
 
 Now I can see a lot more clearly what files are in my current working directory. Some of these items are files, some are directories and in my case also have a `link` which we'll deal with on another day :)
 
 The ls command can take a directory as an argument
 
   [tripta:~]$ ls -l Documents/
-  total 40360
-  drwxr-xr-x   4 tripta  staff      136 Feb 22 20:01 Rails
-  -rw-r--r--@  1 tripta  staff  8154896 Feb 27 10:57 Profile.png
-  -rw-r--r--@  1 tripta  staff  6258658 Feb 27 10:57 Profile2.png
+
+	  total 40360
+	  drwxr-xr-x   4 tripta  staff      136 Feb 22 20:01 Rails
+	  -rw-r--r--@  1 tripta  staff  8154896 Feb 27 10:57 Profile.png
+	  -rw-r--r--@  1 tripta  staff  6258658 Feb 27 10:57 Profile2.png
 
 The ls command can also take a wildcard as an argument
 
   [tripta:~]$ ls -l Documents/*.png
-  -rw-r--r--@ 1 tripta  staff  8154896 Feb 27 10:57 Documents/Profile.png
-  -rw-r--r--@ 1 tripta  staff  6258658 Feb 27 10:57 Documents/Profile2.png
+  
+  	-rw-r--r--@ 1 tripta  staff  8154896 Feb 27 10:57 Documents/Profile.png
+	  -rw-r--r--@ 1 tripta  staff  6258658 Feb 27 10:57 Documents/Profile2.png
 
 ##Hidden Files
 Have you ever heard of `hidden files`? Well it's true, they are real! and we can see them:
 
   [tripta:~]$ ls -la
-  total 368
-  drwxr-xr-x+  76 tripta  staff   2584 Apr  6 10:30 .
-  drwxr-xr-x    6 root    admin    204 Nov  4 10:47 ..
-  -rw-r--r--@   1 tripta  staff  15364 Apr  2 16:00 .DS_Store
-  -rw-------    1 tripta  staff   8949 Apr  1 17:21 .bash_history
-  -rw-r--r--    1 tripta  staff    285 Mar 17 14:50 .bash_profile
-  -rw-r--r--    1 tripta  staff     59 Feb  2 13:47 .bashrc
-  drwxr-xr-x    5 tripta  staff    170 Dec  5 13:21 .bundler
-  -rw-r--r--    1 tripta  staff    379 Mar  3 17:36 .gitconfig
-  drwxr-xr-x   30 tripta  staff   1020 Feb  2 13:47 .rvm
-  drwxr-xr-x    2 tripta  staff     68 Dec  4 15:13 Applications
-  drwx------+   6 tripta  staff    204 Mar 23 18:20 Desktop
-  drwx------+  11 tripta  staff    374 Feb 27 10:57 Documents
-  drwx------+ 141 tripta  staff   4794 Apr  5 08:04 Downloads
-  drwxr-xr-x    3 tripta  staff    102 Nov 12 13:56 Justinmind
-  drwx------@  56 tripta  staff   1904 Apr  4 21:58 Library
-  drwx------+   3 tripta  staff    102 Nov  4 10:49 Movies
-  drwx------+   8 tripta  staff    272 Mar  5 15:48 Music
-  drwx------+  20 tripta  staff    680 Mar 23 12:53 Pictures
-  drwxr-xr-x+   5 tripta  staff    170 Nov  4 10:49 Public
-  drwxr-xr-x    3 tripta  staff    102 Jan 31 13:21 bin 
-  ......More Files.....
-  -rwxr-xr-x    1 tripta  staff    184 Nov  8 16:41 git_profile.sh
-  -rw-r--r--    1 tripta  staff    327 Mar 27 09:22 gitshell.sh
-  drwxr-xr-x   22 tripta  staff    748 Feb  3 15:15 hashes
-  drwxr-xr-x    3 tripta  staff    102 Apr  1 10:34 helloroom
-  -rwxr-xr-x    1 tripta  staff    409 Nov 15 12:13 phpshell.sh
-  -rwxr-xr-x    1 tripta  staff    299 Jan 31 13:27 rorshell.sh
-  -rwxr-xr-x    1 tripta  staff    316 Feb  2 10:35 rorshellws.sh
-  lrwxr-xr-x    1 tripta  staff      5 Nov  7 18:22 work -> /work
+ total 368
+	  drwxr-xr-x+  76 tripta  staff   2584 Apr  6 10:30 .
+	  drwxr-xr-x    6 root    admin    204 Nov  4 10:47 ..
+	  -rw-r--r--@   1 tripta  staff  15364 Apr  2 16:00 .DS_Store
+	  -rw-------    1 tripta  staff   8949 Apr  1 17:21 .bash_history
+	  -rw-r--r--    1 tripta  staff    285 Mar 17 14:50 .bash_profile
+	  -rw-r--r--    1 tripta  staff     59 Feb  2 13:47 .bashrc
+	  drwxr-xr-x    5 tripta  staff    170 Dec  5 13:21 .bundler
+	  -rw-r--r--    1 tripta  staff    379 Mar  3 17:36 .gitconfig
+	  drwxr-xr-x   30 tripta  staff   1020 Feb  2 13:47 .rvm
+	  drwxr-xr-x    2 tripta  staff     68 Dec  4 15:13 Applications
+	  drwx------+   6 tripta  staff    204 Mar 23 18:20 Desktop
+	  drwx------+  11 tripta  staff    374 Feb 27 10:57 Documents
+	  drwx------+ 141 tripta  staff   4794 Apr  5 08:04 Downloads
+	  drwxr-xr-x    3 tripta  staff    102 Nov 12 13:56 Justinmind
+	  drwx------@  56 tripta  staff   1904 Apr  4 21:58 Library
+	  drwx------+   3 tripta  staff    102 Nov  4 10:49 Movies
+	  drwx------+   8 tripta  staff    272 Mar  5 15:48 Music
+	  drwx------+  20 tripta  staff    680 Mar 23 12:53 Pictures
+	  drwxr-xr-x+   5 tripta  staff    170 Nov  4 10:49 Public
+	  drwxr-xr-x    3 tripta  staff    102 Jan 31 13:21 bin 
+	  ......More Files.....
+	  -rwxr-xr-x    1 tripta  staff    184 Nov  8 16:41 git_profile.sh
+	  -rw-r--r--    1 tripta  staff    327 Mar 27 09:22 gitshell.sh
+	  drwxr-xr-x   22 tripta  staff    748 Feb  3 15:15 hashes
+	  drwxr-xr-x    3 tripta  staff    102 Apr  1 10:34 helloroom
+	  -rwxr-xr-x    1 tripta  staff    409 Nov 15 12:13 phpshell.sh
+	  -rwxr-xr-x    1 tripta  staff    299 Jan 31 13:27 rorshell.sh
+	  -rwxr-xr-x    1 tripta  staff    316 Feb  2 10:35 rorshellws.sh
+	  lrwxr-xr-x    1 tripta  staff      5 Nov  7 18:22 work -> /wor
 
 Hidden Files are typically used by applications to store configurations and there will be a many of them in your home directory. Most users don't want to be editing these files so they don't show up in `Finder`, but you as a software developer will be editing some these for yourself later on in the course.
 
