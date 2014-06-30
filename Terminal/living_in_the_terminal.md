@@ -147,7 +147,8 @@ The ls command can also take a wildcard as an argument
 Have you ever heard of `hidden files`? Well it's true, they are real! and we can see them:
 
   [tripta:~]$ ls -la
- total 368
+ 	
+ 	total 368
 	  drwxr-xr-x+  76 tripta  staff   2584 Apr  6 10:30 .
 	  drwxr-xr-x    6 root    admin    204 Nov  4 10:47 ..
 	  -rw-r--r--@   1 tripta  staff  15364 Apr  2 16:00 .DS_Store
@@ -194,23 +195,26 @@ Hidden files are hidden because their names begin with `.`
 ##Root Directory
 Another important directory is the root directory `/`
 
-  [tripta:~]$ cd /
-  [tripta:/]$ pwd
-  /
+  	[tripta:~]$ cd /
+  
+  	[tripta:/]$ pwd
 
 As we discovered the files on your computer are structured in a tree. The 'top' of the file system is know as the `root` directory (That may sound upside down, but in our case the root is at the top :) )
 
 We can move to the __root directory__ with the command `cd /`.  
 We can move back to your __home directory__ with the command `cd ~`.  
 
-  [tripta:/]$ cd ~
-  [tripta:~]$ pwd
-  /Users/tripta
+  	[tripta:/]$ cd ~
+  
+  	[tripta:~]$ pwd
+  
+  		/Users/tripta
 
 You might have noticed that the prompt changed from `[tripta:/]$` to `[tripta:~]$`. The default prompt includes the current username and the current directory
 
-  [tripta:~]$ cd /Users/tripta/
-  [tripta:~]$ 
+  	[tripta:~]$ cd /Users/tripta/
+  
+	[tripta:~]$ 
 
 The `~` always refers to the current user's home directory, this is handy for scripts and for you, but you can use the full path just as well if you know it, `pwd` will give you the full path
 
@@ -267,7 +271,7 @@ __Exercise: 5 minutes in Pairs__
 * Absolute and Relative Paths
 * Tab Completion
 
-#<a name="files"></a>File Maniuplation
+#<a name="files"></a>File Manipulation
 
 ##mkdir
 
@@ -289,8 +293,9 @@ __Operands__ (or arguments or parameters) are what comes after a command, so we 
 
 __Try This__
 
-  [tripta:~]$ cd ~
-  [tripta:~]$ mkdir living_room
+  	[tripta:~]$ cd ~
+  
+  	[tripta:~]$ mkdir living_room
 
 What command can you use to see the results of you handywork? 
 
@@ -415,32 +420,20 @@ For more ideas go here: [How to Use Wildcards](http://www.linfo.org/wildcard.htm
 * piping
 * moving, copying and removing
 
-
-
-#<a name="execution"></a>Command Execution
-
-### The Shell is Programming
-
-In interacting with the terminal like we did today, we've been using a programming language called __bash__, which stands for _Bourne-again shell_.  There are many different shell languages, but the commands we went over today will work in almost any.  Another common shell is __zsh__.  
-
-The fact that we interact with the computer by programming empowers us. Instead of struggling to talk about the difference between two menus in a graphical program, we can communicate precisely about shell commands that have a predictable effect.
-
-### What happens when you run a command?
-
-Sometimes it's important to know how the shell finds the commands that you run.  The command `which [command-name]` will tell you the location of the file which will be run when you execute that command.  For example, `which rm` on my computer gives `/bin/rm`.
-
-The shell finds these commands by looking at the PATH variable in the shell.  `echo $PATH` will show you the contents of PATH.  It should be a list of directories separated by `:`.  When you run any command, the shell looks in the directories for files that match the name of the command you're trying to run, and executes the first one it finds.  Most of you should have a line changing PATH in your `~/.bash_profile` file, which is run every time you open a new terminal session (tab or window).
-
-
 #<a name="review"></a>Review
 ##History
 What have we been up to?
 
-  [tripta:~]$ <UP ARROW>
-  [tripta:~]$ <UP ARROW>
-  [tripta:~]$ <DOWN ARROW>
-  [tripta:~]$ <DOWN ARROW>
-  [tripta:~]$ history
+	  [tripta:~]$ <UP ARROW>
+	  
+	  [tripta:~]$ <UP ARROW>
+	  
+	  [tripta:~]$ <DOWN ARROW>
+	  
+	  [tripta:~]$ <DOWN ARROW>
+	  
+	  [tripta:~]$ history
+  
 ##Topics  
   * Current Directory
   * Home Directory
@@ -452,7 +445,6 @@ What have we been up to?
   * `mkdir`
   * echo, Redirection and Piping
   * Moving, Copying and Removing
-  * `$PATH`
   * `which ruby`
 
 
@@ -475,7 +467,6 @@ __Note:__ In documentation we often see a `#` or a `$` prefix before code exampl
 ##Bonus Topics
 * Terminal Cheat Sheet
 * `cat ~/.bash_profile`
-* `echo "$PATH"`
 * `export EDITOR='subl -w'`
 * Different Types of shell
 * Custom Git Prompt
