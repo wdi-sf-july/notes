@@ -23,10 +23,7 @@ Important Note:
   * `mkdir`
   * Editing Files   
   * echo, Redirection and Piping
-  * Moving, Copying and Removing
-* [Command Execution](#execution)  
-  * `$PATH`
-  * `which ruby`
+  * Moving, Copying and Removing`
 * [Review](#review)
   * Getting Help
   * Bonus Topics
