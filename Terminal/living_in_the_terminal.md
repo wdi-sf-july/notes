@@ -258,7 +258,7 @@ __Exercise: 5 minutes in Pairs__
 
 ##Mini Review - Navigating Around
 * root directory `/`
-* `./` and `../`
+* `../`
 * Absolute and Relative Paths
 * Tab Completion
 
@@ -431,7 +431,7 @@ What have we been up to?
   * `ls`,`pwd`, commands
   * Root Directory
   * `cd`  
-  * Absolute and Relative Paths
+  * Relative Paths
   * Tab Completion
   * `mkdir`
   * echo, Redirection and Piping
