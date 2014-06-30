@@ -56,7 +56,7 @@ The first step is creating a version database, a repository
 
 Now add files to the repo - this is also called staging. You can add files individually or the entire directory (includes sub dirs)
 
-  	git add guessing_game.rb (add just a single file)
+  	git add (name of file)
   	git add . (to add everything in the directory)
 
 The files and folders are now under git management, or tracked.
@@ -79,10 +79,6 @@ check differences, what changed since last commit
 
   	git diff <file>
 
-How to we revert to a working version?
-  
-  	git checkout <file>
-
 Now make a real change that you want to keep.
 
   perhaps add comment
@@ -97,12 +93,6 @@ Commit first change - Now that your staging area is set up the way you want it, 
 
 **Note Staging is optional**: Although it can be amazingly useful for crafting commits exactly how you want them, the staging area is sometimes a bit more complex than you need in your workflow. If you want to skip the staging area, Git provides a simple shortcut. Providing the -a option to the git commit command makes Git automatically stage every file that is already tracked before doing the commit, letting you skip the git add part.
 
-**I recommend a workflow without 'staging'**
-
-Let's try this out. Make change and not stage it with add, but commit with -a option.
-
-  	git commit -a  -m 'comment' //includes staging step **OR**
-  	git commit -m 'comment' <file> or . //omits  staging step entirely
 
 check log - shows the version history, let's take a look
 
@@ -136,9 +126,9 @@ So far we have looked solely at local repositories, remember most of what you do
 
 Remote repositories are versions of your project that are hosted on the Internet or network somewhere. You can have several of them, each of which generally is either read-only or read/write for you. Collaborating with others involves managing these remote repositories and pushing and pulling data to and from them when you need to share work. Plus: remote repositories functions as backups, they cannot get lost, like your laptop. It is like saving 'in the cloud'.
 
-Enter github - a place to host remote repositories.
+Enter Github - a place to host remote repositories.
 
-Got to github.com and explore. Some interesting repositories:
+Go to github.com and explore. Some interesting repositories:
 
 - https://github.com/ruby - ruby source code
 - https://github.com/facebook - facebook on github
@@ -152,9 +142,9 @@ Now check configuration:
 
 Ok, good to go.
 
-Create repo, name it 'week1day1' (for example)
+Create repo, name it 'week0day2' (for example)
 
-  	git remote add origin git@github.com:aikalima/week1day1.git
+  	git remote add origin git@github.com:neurosaurus/week0day2.git
 
 Reads: *Connect the remote repository week1day1 with my local workspace, where it shall be known as 'origin'*
 
@@ -170,14 +160,15 @@ Reads: *Upload what is in my local repository (master) to github (origin)*
 Check if changes made it to github. Now make a local change. **5 min**
 
   	make change
+  	git add .
 	git commit -m 'my comment' .
 	git push origin master
 
 Did change make it to remote?
 
-Try cloning a repo. cd into /tmp direcory.
+Try cloning a repo. cd into Desktop.
 
-  	cd /tmp
+  	cd /Desktop
 	git clone … (grab url from git repo page, either SSH or HTTPS)
 
 ##Branching
@@ -249,7 +240,12 @@ A picks up changes
 
   	git pull origin master  -> pulls from github repo
 
-## Afternoon lab - githug
+####Labs
+Lab 1: https://gist.github.com/neurosaurus/2b5013313c2fa28eab89
+
+Lab 2: https://github.com/wdi-sf-july/git_clone_lab
+
+##Extra Credit - githug
 
 Setup password caching, also an exercise in command line usage:
 
@@ -262,9 +258,3 @@ Interactive github tutorial, githug. Find it on github, clone, follow install in
 You may encounter some new commands that we didn't have time to cover, for example:
 
 	tag / stash …  look it up, google.
-
-
-####Labs
-Lab 1: https://gist.github.com/neurosaurus/2b5013313c2fa28eab89
-
-Lab 2: https://github.com/wdi-sf-july/git_clone_lab
