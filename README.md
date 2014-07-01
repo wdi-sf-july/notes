@@ -2,6 +2,11 @@
 ## Distributed Lesson Materials
 
 
+###  Topical Index
+
+* prep_work
+  * [intro_git](/00/day_1/dawn/intro_git)
+
 
 ### Contributing 
 
@@ -44,10 +49,5 @@ Links in the **Topical Index** are relative to the repo, so if one were to add `
 * prep_work
   * [intro_git](/00/day_1/dawn/intro_git)
 ```
-
-###  Topical Index
-
-* prep_work
-  * [intro_git](/00/day_1/dawn/intro_git)
 
 
