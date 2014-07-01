@@ -26,7 +26,7 @@ More specifically, a VCS allows you to:
 Plus it functions as a backup system, a safe place for all your work. Using a VCS means that if you screw things up or lose files, you can generally recover easily. In addition, you get all this for very little overhead.
 
 Software programming is a highly team based activity, large teams working together on single projects.
-That's why I love programming: A project is always more fun when you’ve got friends working with you.
+That's why I love programming: A project is always more fun when you've got friends working with you.
 
 So how do you collaborate in software projects, what are some useful workflows and best practices? Git and github provide a framework, tools and workflows for collaboration.
 
@@ -87,7 +87,7 @@ Now stage change (note: you use it to begin tracking new files or to stage files
 
   	git add <file>
 
-Commit first change - Now that your staging area is set up the way you want it, you can commit your changes. Remember that anything that is still unstaged — any files you have created or modified that you haven’t run git add on since you edited them
+Commit first change - Now that your staging area is set up the way you want it, you can commit your changes. Remember that anything that is still unstaged — any files you have created or modified that you haven't run git add on since you edited them
 
   	git commit -m 'comment' (commits only what was staged with git add)
 
@@ -173,7 +173,7 @@ Try cloning a repo. cd into Desktop.
 
 ##Branching
 
-The master branch is where we’ve currently been working. Normally this branch is reserved for production code, meaning that it is ready to be put on production servers for the whole world to use. Instead, development is normally done on other branches. Currently there are master branches both locally and remotely.
+The master branch is where we've currently been working. Normally this branch is reserved for production code, meaning that it is ready to be put on production servers for the whole world to use. Instead, development is normally done on other branches. Currently there are master branches both locally and remotely.
 
 Use case: Let's say you need to work on a larger feature that takes about a week, you want to create a separate code branch and start work there. This is called 'topic branch'. The idea is that you want to keep a clean, production ready master branch at all time. Why? Let's say a severe bug was discovered on the live web site, pointy haired boss asks you to fix it. You Create another branch from the clean master branch, fix the bug and merge the fix back to master.
 
@@ -185,7 +185,7 @@ Just like in a tree, you can create a branch off an existing branch.
 
 	git branch development
 
-Now that a new branch has been created, let’s move to it.
+Now that a new branch has been created, let's move to it.
 
   	git checkout development
   	git checkout -b development (create and switch at the same time)
