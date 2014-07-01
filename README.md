@@ -6,6 +6,8 @@
 
 * prep_work
   * [intro_git](/00/day_1/dawn/intro_git)
+  * [intro_js](/00/day_1/dawn/intro_js)
+  * [intro_terminal](/00/day_1/dawn/intro_terminal)
 
 
 ### Contributing 
