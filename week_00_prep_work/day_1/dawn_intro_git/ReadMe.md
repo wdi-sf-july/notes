@@ -40,7 +40,7 @@ It's a social network build around git. I has has completely changed the way we,
 
 **git and github together is a distributed version control system**
 
-git is local (Computer A). Nearly every operation is local. Most operations in Git only need local files and resources to operate — generally no information is needed from another computer on your network. **Advantage?**
+git is local (Computer A). Nearly every operation is local. Most operations in Git only need local files and resources to operate - generally no information is needed from another computer on your network. **Advantage?**
 
 Github is the "Server Computer" and more, as we will see.
 
@@ -87,7 +87,7 @@ Now stage change (note: you use it to begin tracking new files or to stage files
 
   	git add <file>
 
-Commit first change - Now that your staging area is set up the way you want it, you can commit your changes. Remember that anything that is still unstaged — any files you have created or modified that you haven't run git add on since you edited them
+Commit first change - Now that your staging area is set up the way you want it, you can commit your changes. Remember that anything that is still unstaged - any files you have created or modified that you haven't run git add on since you edited them
 
   	git commit -m 'comment' (commits only what was staged with git add)
 
