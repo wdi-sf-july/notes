@@ -71,7 +71,7 @@ Let's say you're done for now and want to save a version.
 - staging area: now file is tracked in git
 - git directory: a snapshot of your committed work
 
-Now let's go and change a file … mess it up! Check status:
+Now let's go and change a file ... mess it up! Check status:
 
   	git status <file>
 
@@ -169,7 +169,7 @@ Did change make it to remote?
 Try cloning a repo. cd into Desktop.
 
   	cd /Desktop
-	git clone … (grab url from git repo page, either SSH or HTTPS)
+	git clone ... (grab url from git repo page, either SSH or HTTPS)
 
 ##Branching
 
@@ -257,4 +257,4 @@ Interactive github tutorial, githug. Find it on github, clone, follow install in
 
 You may encounter some new commands that we didn't have time to cover, for example:
 
-	tag / stash …  look it up, google.
+	tag / stash ...  look it up, google.
