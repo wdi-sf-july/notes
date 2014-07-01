@@ -22,6 +22,7 @@ Below is an outline of how to add notes to this repository, navigate and develop
 * Folder **Prefix** and **Suffix**
 * Sample Structure
 * Topical Index
+* ignored files
 
 #### Adding notes
 
@@ -110,7 +111,7 @@ week_01_intro_web/
 
 ```
 
-### Topical Index
+#### Topical Index
 Links in the **Topical Index** are relative to the repo, so if one were to add `intro_git` as a link under the `prep_work` bullet it would be added as follows:
 
 ```
@@ -118,4 +119,6 @@ Links in the **Topical Index** are relative to the repo, so if one were to add `
   * [intro_git](/00/day_1/dawn/intro_git)
 ```
 
+### Ignored Files
 
+If you're working on material you don't want commited then add the `working` prefix.
