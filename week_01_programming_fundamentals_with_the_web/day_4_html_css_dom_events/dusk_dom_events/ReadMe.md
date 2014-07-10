@@ -321,7 +321,7 @@ Use the following html to try the following exercises.
 </html>
 
 ```
-5.)  Listen for a click on `div_1` through `div_5` and each time something is clicked change its color to blue element with the content from the `div`. On each click update the `previously_clicked` element with content from the previously clicked element. 
+5.)  Listen for a click on `div_1` through `div_5` and each time something is clicked change its color to blue. On each click update the `previously_clicked` element with content from the previously clicked element. 
 
 **(Hint: you need a global variable to hold the `currentlyClicked` content that you should use to update the `previously_clicked` div)**.
 
