@@ -325,7 +325,7 @@ Use the following html to try the following exercises.
 
 **(Hint: you need a global variable to hold the `currentlyClicked` content that you should use to update the `previously_clicked` div)**.
 
-6.) Building off the last example, listen for a click on the `previously_clicked` element, and when clicked it should take the `currentlyClicked` div to have a white `backgroundColor` and use `number` its displaying to change the respective div to have background color blue.
+6.) Building off the last example, listen for a click on the `previously_clicked` element.  When clicked, make the `currentlyClicked` div have a white `backgroundColor` and use the number it's displaying to change the respective div to have background color blue.
 
 
 ### Event Context
