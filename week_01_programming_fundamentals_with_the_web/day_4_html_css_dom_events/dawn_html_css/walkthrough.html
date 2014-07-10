@@ -1,0 +1,60 @@
+<!doctype HTML>
+<html>
+<head>
+  <title>WDI In-Class Walkthrough</title>
+  <style>
+    /* I do (5): */
+    img {
+      float: right;
+      height: 2em;
+    }
+    body {
+      font-family: "Georgia", serif;
+      color: #888;
+    }
+    /* You do (5): */
+    h2 {
+      font-family: "Helvetica", sans-serif;
+      color: #444;
+    }
+  </style>
+  <!-- then (6), move it to an external stylesheet and explain that
+       this lets multiple webpages share the same look -->
+  <link rel="stylesheet" type="text/css" href="walkthrough.css" />
+</head>
+<body>
+  <p>(this is a lesson guide/reminder of what to show the class, not exactly what to type)</p>
+
+  First some content
+  <p>But it should be in a paragraph tag!</p>
+  <h1>I do (1): Heading!</h1>
+  <h2>You do (1): subheading!</h2>
+  <p><!-- I do (4) only, skip this initially: "some tags, known as 'self-closing tags' or 'void tags', may not have children at all" --><img src="http://img1.wikia.nocookie.net/__cb20101019022831/logopedia/images/c/c6/Bing_logo.png" />I do (2): I am a big fan of <a href="http://bing.com">Bing</a>, everyone loves the underdog</p>
+  <p><!-- You do (4): --><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Googlelogo.png/320px-Googlelogo.png" />You do (2): Hahaha I'm just kidding, of course not, I use <a href="http://google.com">Google</a> just like everyone else in the world, including Microsoft employees</p>
+  <ol>
+    <!-- I do (3): "some tags only allow certain tags inside" (also, see if you can do an impression of The Count from Sesame Street :D) -->
+    <li>Ah ha ha!</li>
+    <li>Ah ha ha!</li>
+    <li>Ah ha ha!</li>
+  </ol>
+  <ul>
+    <!-- You do (3): some websites you like -->
+    <li><a href="http://en.wikipedia.org">Wikipedia</a> is an epic Massively-Multiplayer Online Role-Playing Game where people pretend to be dry academics</li>
+    <li><a href="http://thedailywtf.com">The Daily WTF</a>, Curious Perversions in Information Technology</li>
+  </ul>
+  <!-- add logo images to Google/Bing (4),
+       go up to the <head> and style stuff (5),
+       split out into external stylesheet (6),
+       add class="second" to an li (7),
+       and finally, nested selectors -> nested link color issue, I do (8): -->
+  <p>A paragraph with something <em>emphasized</em>, like so.</p>
+  <blockquote>
+    <p>This is a quote from some famous person who undoubtedly has something <em>very important</em> to say.</p>
+  </blockquote>
+  <!-- You do (8): a link in an h2 won't be the h2's color, why and how fix? -->
+  <h2><a href="mailto:email@example.com">Contact Me</a></h2>
+  <p>Email:</p>
+  <p>Number:</p>
+  <p>Office Address:</p>
+</body>
+</html>

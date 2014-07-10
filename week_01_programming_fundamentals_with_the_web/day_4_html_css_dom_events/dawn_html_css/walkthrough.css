@@ -1,0 +1,47 @@
+/* internal -> external stylesheet (6) */
+img {
+  float: right;
+  height: 2em;
+}
+body {
+  font-family: Georgia, serif;
+  color: #888;
+}
+h2 {
+  font-family: Helvetica, sans-serif;
+  color: #444;
+}
+/* I do (7): */
+.second {
+  font-size: 1.2em;
+}
+/* You do (7): */
+.first {
+  font-style: italic;
+}
+/* after adding blockquote and em's, I do (8): */
+blockquote {
+  font-style: italic;
+}
+blockquote em {
+  font-style: normal;
+}
+/* You do (8): */
+h2 a {
+  color: #444;
+}
+/* finally box model; I do (9): */
+blockquote {
+  border-left: 5px solid #ccc;
+  padding-left: 1em;
+  margin: 0;
+}
+/* You do (9): */
+blockquote {
+  border-left: 2px dotted #888;
+  padding-left: .2em;
+  margin: 1em;
+}
+ul {
+  padding: 1.2em;
+}
