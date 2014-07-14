@@ -14,7 +14,13 @@ The following is a topical organization of the lesson notes.
   * [primatives: numbers, strings, arrays, objects](/week_01_programming_fundamentals_with_the_web/day_2_intro_to_js/dawn_js_primatives)
   * [loops](/week_01_programming_fundamentals_with_the_web/day_2_intro_to_js/dusk_js_control_flow)
   * [js functions](/week_01_programming_fundamentals_with_the_web/day_3_js_functions/dawn_js_functions)
-  * [more js functions] (/week_01_programming_fundamentals_with_the_web/day_3_js_functions/dusk_js_functions)
+  * [more js functions] (/week_01_programming_fundamentals_with_the_web/day_3_js_functions/dusk_more_functions)
+
+* JS and The DOM
+  * [intro dom](/week_01_programming_fundamentals_with_the_web/day_4_html_css_dom_events/dusk_dom_events)
+* HTML and CSS
+  * [intro css](/week_01_programming_fundamentals_with_the_web/day_4_ht
+ml_css_dom_events/dawn_html_css)
 
 ### Contributing 
 
