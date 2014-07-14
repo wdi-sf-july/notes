@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2014 by anonymous (http://jsbin.com/pinosabe/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<head>
+  <script type="text/javascript" src="calculator.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>HTML Calculator</title>
+
+<style id="jsbin-css">
+
+#container {
+	background: grey;
+	height: 350px;
+	width: 300px;
+	padding-top: 20px;
+	border: 2px solid;
+    border-color: black;
+}
+
+#result_display {
+	background: white;
+	height: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 25px;	
+	width: 88%;
+	text-align: right;
+	padding-top: 5px;
+	padding-right: 5px;
+	font-size: 1.5em;
+
+}
+
+#operator_display {
+	text-align: left;
+	height: 12px;
+	font-size: .75em;
+	padding-left: 5px;
+}
+
+.row {
+	height: 50px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:10px;
+	width: 90%;
+    border: 2px solid;
+    border-color: white;
+
+}
+
+.button {
+	width: 22%;
+	height: 65%;
+	margin: 4px 0px 4px 7px;
+	background: black;
+	text-align: center;
+	padding-top: 10px;
+	color: white;
+	float: left;
+}
+</style>
+</head>
+<body>
+  <div id="container">
+     <div id="result_display">
+       <div id="operator_display"></div>
+       <div id="result_display_value"></div>
+     </div>
+     <div id="buttons_row_1" class="row">
+       <div id="number_1" class="button">1</div>
+       <div id="number_2" class="button">2</div>
+       <div id="number_3" class="button">3</div>
+       <div id="op_plus" class="button">+</div>
+     </div>
+     <div id="buttons_row_2" class="row">
+        <div id="number_4" class="button">4</div>
+        <div id="number_5" class="button">5</div>
+        <div id="number_6" class="button">6</div>
+        <div id="op_sub"class="button">-</div>
+     </div>
+     <div id="buttons_row_3" class="row">
+        <div id="number_7" class="button">7</div>
+        <div id="number_8" class="button">8</div>
+        <div id="number_9" class="button">9</div>
+        <div id="op_mult" class="button">*</div>
+     </div>
+     <div id="buttons_row_4" class="row">
+        <div id="op_clr" class="button">CLR</div>
+        <div id="number_0" class="button">0</div>
+        <div id="op_ent" class="button">ENT</div>
+        <div id="op_div"class="button">/</div>
+     </div>
+  </div>
+<script>
+window.onload = function() {
+
+  // displays
+  var display = document.getElementById("result_display_value");
+  var operator = document.getElementById("operator_display");
+
+  // Number buttons
+  var numOne = document.getElementById("number_1"),
+      numTwo = document.getElementById("number_2"),
+      numThree = document.getElementById("number_3"),
+      numFour = document.getElementById("number_4"),
+      numFive = document.getElementById("number_5"),
+      numSix = document.getElementById("number_6"),
+      numSeven = document.getElementById("number_7"),
+      numEight = document.getElementById("number_8"),
+      numNine = document.getElementById("number_9"),
+      numZero = document.getElementById("number_0");
+
+  // Operations
+
+  var addOp = document.getElementById("op_plus"),
+      subOp = document.getElementById("op_sub"),
+      multOp = document.getElementById("op_mult"),
+      divOp = document.getElementById("op_div"),
+      entOp = document.getElementById("op_ent"),
+      clrOp = document.getElementById("op_clr");
+
+  // state
+  var hiddenOperand;
+  
+  // event handlers
+  numOne.onclick = function() {
+    display.innerHTML += '1';
+  };
+  numTwo.onclick = function() {
+    display.innerHTML += '2';
+  };
+  numThree.onclick = function() {
+    display.innerHTML += '3';
+  };
+
+  addOp.onclick = function() {
+    hiddenOperand = display.innerHTML;
+    display.innerHTML = '';
+    operator.innerHTML = '+';
+  };
+  subOp.onclick = function() {
+    hiddenOperand = display.innerHTML;
+    display.innerHTML = '';
+    operator.innerHTML = '-';
+  };
+  multOp.onclick = function() {
+    hiddenOperand = display.innerHTML;
+    display.innerHTML = '';
+    operator.innerHTML = '*';
+  };
+  divOp.onclick = function() {
+    hiddenOperand = display.innerHTML;
+    display.innerHTML = '';
+    operator.innerHTML = '/';
+  };
+  
+  entOp.onclick = function() {
+    var result = parseInt(hiddenOperand);
+    if (operator.innerHTML === '+') {
+      result += parseInt(display.innerHTML);
+    } else if (operator.innerHTML === '-') {
+      result -= parseInt(display.innerHTML);
+    } else if (operator.innerHTML === '*') {
+      result *= parseInt(display.innerHTML);
+    } else if (operator.innerHTML === '/') {
+      result /= parseInt(display.innerHTML);
+    } else {
+      result = display.innerHTML;
+    }
+    display.innerHTML = result;
+    operator.innerHTML = '';
+  };
+  clrOp.onclick = function() {
+    hiddenOperand = undefined;
+    display.innerHTML = '';
+    operator.innerHTML = '';
+  };
+  
+};
+</script>
+</body>
+
+</html>
