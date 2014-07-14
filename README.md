@@ -19,8 +19,7 @@ The following is a topical organization of the lesson notes.
 * JS and The DOM
   * [intro dom](/week_01_programming_fundamentals_with_the_web/day_4_html_css_dom_events/dusk_dom_events)
 * HTML and CSS
-  * [intro css](/week_01_programming_fundamentals_with_the_web/day_4_ht
-ml_css_dom_events/dawn_html_css)
+  * [intro css](/week_01_programming_fundamentals_with_the_web/day_4_html_css_dom_events/dawn_html_css)
 
 ### Contributing 
 
