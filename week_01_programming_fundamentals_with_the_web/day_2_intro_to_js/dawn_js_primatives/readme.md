@@ -1,4 +1,13 @@
-# JavaScript Introduction
+# Javascript Primitives
+## Intro to Programming fundamentals
+
+
+## Objectives
+
+| Objectives |
+| :----- |
+| To manipulate datatypes and create expressions in JS |
+
 
 ## Agenda
 * Brainstorm (Ruby v. Javascript)
@@ -6,304 +15,385 @@
 * Understand Data Types
   * Comments
   * Numbers
+  * Strings
   * Values & Expressions
+  * Objects everywhere
+    * Arrays
+    * Objects
   * Conditionals
   * Reference Types
   * Undefined
   * False
-  * Arrays
-* Javascript Object Literal 
-* Javascript Control Flow
-  * Conditionals (if/else)
-  * While loop
-  * For loop
-  * Switch case
+  * Javascript Object Literal 
 
-##Objectives
-* Be able to use various JS data types
-* Be able to control flow operators in JS
-* Be able to manipulate JS object literals
+
+## Comments
+
+Comments come in two forms 
+
+  * line comments
   
-## History of Javascript
-![Javascript Timeline](javascriptimeline.jpg "Javascript Timeline")
-
-* Not to be confused with Java, but it is the baby child of Java syntax & Scheme principles
-* Created in 10 days in May 1995 by [Brendan Eich](http://en.wikipedia.org/wiki/Brendan_Eich)
-* It's an exciting time to learn Javascript! It's the language that enables web pages to respond to user interaction beyond the basic level.
-
-## Why Javascript? 
-![Javascript All The Things](javascript.jpg "Javascript")
-
-Simple answer: We want high performance web sites!
-
-*But what does this mean?*
-
-* Client side programming:
-  * Interaction with the DOM
-  * Respond to DOM events: click, submit...
-  * Send requests to the server.
-  * Acts on response from the server.    
-* Loosely-typed language: you don't have to explicitly declare what type of data the variables are. You just need to use the var keyword to indicate that you are declaring a variable, and the interpreter will work out what data type you are using from the context, and use of quotes.
-  * That is, JS figures out the type based on value, and the type can change:
-
-  ```
-  var x;
-  x = 2;
-  x = 'Hi';
-  ```
-
-# Getting Started
-## Node Install
-
-Since we have `brew` installed we can just install node with it
-
-```
-$ brew install node
-```
-or if you're feeling more browser friendly try the following [node link](http://nodejs.org/download/).
-
-Once finished, you should be able to interact with the `node` repl by saying
-
-```
-$ node 
-``` 
-
-or you can run a javascript file like the one below
-
-`hello.js`
-
-```
-console.log("hello world!")
-```
-
-by using the pattern `node <filename>` in javascript.
-
-```
-$ node hello.js
-```
-you can also open the Javascript console in the browser:
-
-[http://webmasters.stackexchange.com/questions/8525/how-to-open-the-javascript-console-in-different-browsers](How to open the JavaScript console in different browsers?)
-
-## Comments in Javascript:
-* Ruby uses '#' to indicate a comment line.
-* JavaScript uses '//' for line comment.
-
-## Numbers:
-* Ruby has Integers and Floats
-* JavaScript only has Numbers
-
-## Values & Expressions
-* Computers return values when you give them expressions. 
-* Give the computer a value and it returns a value, thus values are expressions as well.
-  
-  ```
-  // values are expressions
-    console.log(42);
-
-    // addition is an expression
-    console.log(2 + 2);
-
-    // string concatenation is an expression
-    console.log("hello" + " world");
-    ```
-### Exercise #1: The Fortune Teller
-
-  Why pay a fortune teller when you can just program your fortune yourself?
-
-  - Store the following into variables: number of children, partner's name, geographic location, job title.
-  - Output your fortune to the screen like so: "You will be a X in Y, and married to Z with N kids."
-
-## Conditionals: always use Triple Equal "===" or "!=="
-* Check to see if two values are identical with the "===" strict equality.
-  
-  ```
-    console.log("Always use triple equal sign to test equality.")
-
-    console.log(42 === 42);
-    //=> true
-
-    console.log(3 === "3");
-    //=> false
-
-    // Double equal operator gives the wrong result!!
-    console.log(3 == "3");
-    //=> true
-
-    console.log(2 + 2 === 4);
-    //=> true
-
-    console.log("foo" !== "bar");
-    //=> true
-    ```
-    
-
-  ```
-  console.log("if - else if - else:")
-  // var state = "red";
-  var state = "green";
-  // var state = "blue";
-
-  // "message" is an example of a JavaScript Object Literal.
-  var message = {
-                "failing": "Tests are failing.",
-                "passing": "Tests are passing.",
-                "refactor": "Time to refactor."
-              }
-              
-  if (state === "red") {  
-    console.log(message.failing);
-  } else if (state === "green") {
-    console.log(message.passing);
-  } else { // Time to refactor.
-    console.log(message.refactor);  
-  }
-  ```
-  
-## Exercise #2: The World Translator
-- Write a function named helloWorld that:
-  - takes 1 argument, a language code (e.g. "es", "de", "en")
-  - returns "Hello, World" for the given language, for atleast 3 languages. It should default to returning English.
-- Call that function for each of the supported languages and log the result to make sure it works.  
-    
-## Reference Types: 
-- So what kinds of values might be the same type and have the same contents, but not be considered identical to JavaScript?
-  - Even if they have the same values and are the same type, reference types are not strictly equal.
-* Arrays are unique structures.
-* Try this in your console:
-
-  ```
-    console.log("Arrays are reference-type data structures.")
-    console.log([1,2,3] === [ 2-1, 1+1, 2+1]);
-
-    console.log([1,2,3] === [1,2,3]);
-    ```
-
-## Undefined
-* When something is "undefined", it represents a value that hasn't been defined.
-* Oddly enough "undefined" is a value.
-
-    ```
-    console.log("undefined is a value-type.");
-    console.log(undefined === undefined);
-    //=> true
-    ```
-
-
-## False
-* 0, false, null, undefined, Empty String: ""
-    
-    ```
-    console.log("False Tester:");
-    // Try: 0, "", undefined, null, false. Anything else is true!
-    if(0) { 
-      console.log(true);
-    } else {
-      console.log(false);
-    }
-  ```
-
-##null
-* Represents an explicitly empty value
-  
-## JavaScript Object Literals 
-* An object literal is a list of zero or more pairs of property names and associated values of an object, enclosed in curly braces ({}).
-
-  ```
-  var mickey_mouse = {
-                    "first_name": "Mickey",
-                    "last_name": "Mouse",
-                    "address": "Disneyland"
-                  }
-  var mickey = {
-                    "first_name": "Mickey",
-                    "last_name": "Mouse",
-                    "address": "Disneyland"
-                  }
-
-  // JS Object Literals are reference types
-  // Access a literal value with ".key" syntax!
-  console.log(micky_mouse.first_name);
-  // This also works
-  console.log(micky_mouse["first_name"]);
-
-  console.log("Are JS Object Literals values? ")
-  if(micky_mouse === micky ) {
-    console.log(true );
-  } else {
-    console.log(false );
-  }
-  ```
-
-## For loop
-
-  ```
-  var mixed = [1, "two", "three", true];
-  
-  console.log("For Loop:")
-  
-  // Most common mistake is using commas instead of "semicolons" inside the loop declaration.
-  
-  for(var i = 0; i < mixed.length; i++) {
-    console.log("The element at index " + i + " is: " + mixed[i]); 
-  }
-  ```
-  
-## While loop
-  ```  
-  var a = [1,2,3,4];
-  var b = [1,2,3,4];
-
-  console.log("While Loop:")
-  
-  var i = 0;
-  
-  while(i < a.length) {
-    console.log("The element at index " + i + " is: " + a[i]);
-    i++; 
-  }
-  ```
-
-###Exercise #3: 
-- Write a for loop that will iterate from 0 to 20. For each iteration, it will check if the current number is even or odd, and report that to the screen (e.g. "2 is even").
-  
-## Switch Case
-  
-  ```
-  var expression = "label2"
-
-  switch (expression) {
-    case "label1":
-        console.log("First case: label1");
-        break;
-    case "label2":
-        console.log("Second case: label2");
-        break;
-    case "labelN":
-        console.log("Nth case: labelN");
-        break;
-    default:
-        console.log("Default case.");
-        break;
-    }
    ```
+   // descriptive stuff
+   ```
+  * multiline comments
+  
+  ```
+  /**
+    These 
+    are
+    comments on
+    many lines
+  */
+  
+  ```
+## Numbers 
+
+Numbers are one of the *types* of **values** we want to be able to interact and play with in JS.
+
+* Integers
+
+  ```
+   ..., -1,0, 2, 3, 4, 5, ... 
+  ```
+* Floats (or Decimal numbers)
+
+  ```
+   2.718, 3.14, .5, .25, etc
+  ```
+
+In JS these are the same **type** of object, which it calls *Numbers*, so if you know floats and integers don not go looking for them.
+
+## Strings
+
+Strings are collections of letters and symbols known as **Characters**, and we use them to deal with words and text in Javascript. Strings are just another type of **value** in Javascript.
+
+```
+"John", "Jane"
+```
+
+## Values and Expressions
+
+Types of values like `Number` or `String` are not very useful without being able to form **Expressions** or **Combinations**.
+
+Try your favorite number operators
+
+```
+  1 + 1
+  => 2
+  2 - 1
+  => 1
+```
+You can also create expressions with strings using addition
+
+```
+  "Hello, " + "world!"
+  => "Hello, world!"
+```
+
+This is called **String Concatentation.**
 
 
-- ### Before Lunch Exercise: JavaScript Calculator
+### Special Number Operators
 
-  - Create a calculator in JavaScript.
+Javascript can be a little cheap with the number of operations it allows you to do. For example, how is someone supposed to square a number or cube a number easily? Luckily there is a special `Math` object with some very useful methods.
 
-    - Prompt the user to enter an operator and two operands.
-Support the following operations: addition, subtraction, multiplication, and division.
-Output may appear in the console or in an alert.  
+* Taking a number to some `power`? Then just use `Math.pow`
 
-## Resources:
-* [Code School free course on the Developer Tools](https://www.codeschool.com/courses/discover-devtools)
-* [JavaScript Alonge](https://leanpub.com/javascript-allonge/read#leanpub-auto-a-pull-of-the-lever-prefaces)
-* [MDN JavaScript Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
+```
+// 3^2 becomes
+Math.pow(3,2)
+=> 4
+// 2^4 becomes
+Math.pow(2,4)
+=> 16
+```
+* Taking a square root
 
-##Style Guide
-Check out some style guides for coding  
+```
+// √(4) becomes
+Math.sqrt(4)
+=> 2
+```
+* Need a `random` number? Then use `Math.random`.
 
-- [http://nerds.airbnb.com/our-javascript-style-guide](Airbnb JS Guide)
-- [https://github.com/zillow/javascript](Zillow JS Guide) 
+```
+// The following only returns a random decimal
+Math.random()
+=> .229375290430
+/** 
+  The following will return a 
+  random number between 0 and 10
+*/
+Math.random()*10
+```
+
+* Since Numbers can be **Floats** or **Integers** we often want to get rid of remaining decimal places, which can be done using `Math.floor`.
+
+```
+// Remove the decimal
+Math.floor(3.14)
+=> 3
+Math.floor(3.9999)
+=> 3
+```
+
+## Variables
+
+Having made some expressions it becomes evident we want to store these values.
+
+```
+var myNumber = 1;
+// or also
+
+var myString = "Greetings y'all!"
+```
+
+The main note to make here is that these variables should always have the `var` keyword and use `camelCase`
+
+## Objects Everywhere
+
+In Javascript we just discussed two types of values we can use. We call these values objects, which for now just means that in addition to storing some data you also get to use some helpful methods when you are working with them.
+
+* If you want to turn a number into a string you can use a helpful method called `toString`.
+
+```
+(1).toString()
+=> "1"
+/**
+  be careful though,
+  since numbers can be floats
+  javascript might
+  misunderstand you.
+*/
+1.toString()
+=> Float Error
+// but the following works
+1..toString()
+```
+
+### Arrays 
+
+Unfortunately, strings and numbers are not enough for most programming purposes. 
+What is needed are collections of data that we can use efficiently, Arrays.
+
+Arrays are great for:
+
+* Storing data
+* Enumerating data, i.e. using an index to find them.
+* Quickly reordering data 
+
+```
+var friends = ['Moe', 'Larry', 'Curly'];
+=> ['Moe', 'Larry', 'Curly']
+```
+
+Items in an array are stored in sequential order, and indexed starting at `0` and ending at `length - 1`.
+
+```
+// First friend
+var firstFriend = friends[0];
+ => 'Moe'
+// Get the last friend
+var lastFriend = friends[2]
+=> 'Curly'
+```
+
+### Exercises
+
+1.) Find the last name in the following array:
+
+```
+var friends = [
+                'Moe', 
+                'Larry', 
+                'Curly',
+                'Jane',
+                'Emma',
+                'Elizabeth',
+                'Elinor',
+                'Mary',
+                'Darcy',
+                'Grey',
+                'Lydia',
+                'Harriet'
+              ];
+```
+
+Add your name to the end of the `friends` and add another name to beginning. Change the `Elizabeth` to `Liz`.
+
+2.) Sort the list of `friends` above.
+
+3.) Here are a list of `ages`
+
+```
+var ages = [83, 53, 37, 29, 60, 30, 66, 19, 59, 41, 9, 64, 19, 80, 24, 53, 70, 1, 53, 40, 92, 4, 71, 65, 8, 2, 51, 80, 94, 37, 80, 64, 19, 6, 14];
+
+```
+find the `median` age.
+
+4.) There are a list of names in a string, below. How could we sort them? Hint: use string and array methods.
+ 
+```
+var friends = "Moe,Larry,Curly,Jane,Emma,Elizabeth,Elinor,Mary,Darcy,Grey,Lydia,Harriet";
+```
+
+5.) List all the `friends` above in reverse alphabetical order.
+
+6.) We have two lists of friends below:
+
+```
+var myFriends = [
+                  'Rickon',
+                  'Meera',
+                  'Hodor',
+                  'Jojen',
+                  'Osha',
+                  'Rickard',
+                  'Maester',
+                  'Rodrik',
+                  'Jory',
+                  'Septa',
+                  'Jon'
+                ];
+
+var yourFriends = [
+                    'Bilbo',
+                    'Boromir',
+                    'Elrond',
+                    'Faramir',
+                    'Frodo',
+                    'Gandalf',
+                    'Legolas',
+                    'Pippin'
+                  ];
+```
+
+we need to combine them into one list and sort them.
+
+7.) I have a list of favorite foods below. If `Popcorn` is my favorite food and `Potato chips` my second favorite, then how would you find the rank of another food. Try `Pho`.
+
+
+```
+
+var foods = [
+              'Popcorn',
+              'Potato chips',
+              'Shrimp',
+              'Chicken rice',
+              'Poutine',
+              'Tacos',
+              'Toast',
+              'French Toast',
+              'Crab',
+              'Pho',
+              'Lasagna',
+              'Brownie',
+              'Lobster',
+              'Donuts',
+              'Ice cream',
+              'Hamburger',
+              'Sushi',
+              'Chocolate',
+              'Pizza'
+            ];
+
+```
+
+
+8.) I made a mistake with my favorite foods. How can I find the index of `Donuts` and remove it? **(Hint: look up `splice`)**
+
+9.) My friends want to know what my `5`th to `10`th favorite foods are.
+
+10.) How would you create an array that efficiently stored the following information:
+
+```
+  'Moe' is 18
+  'Larry' is 19
+  'Curly' is 20
+  'Jane' is 20
+  'Emma' is 21
+  'Elizabeth' is 18
+  'Elinor' is 23
+  'Mary' is 25
+  'Darcy' is 24
+  'Grey' is 18
+  'Lydia' is 24
+  'Harriet' is 18
+
+```
+
+### Objects
+
+Why use objects to store `key` and `value` pairs? They are like arrays except that  data is not stored in any sorted order and keys do not have to numbered indexes.
+
+
+#### creating
+
+
+```
+var friend = {name: "john"}
+
+```
+
+#### accessing
+
+
+```
+friend[name]
+```
+
+### Exercise
+
+
+1.) How would you represent the following using and object literal. Then update `john's` address to `1234 Park ln`.
+
+````
+
+John, Doe, 36, 1234 Park st.
+
+````
+**(Hint: think in terms of firstname, lastname, age, address)**
+
+
+2.) Using a combination of Objects and Array, how would you represent the following:
+
+
+```
+  Moe, Doe, 31, 1234 Park st.
+  Larry, Doe, 36, 1234 Spark st.
+  Curly, Doe, 36, 1239 Park st.
+  Jane, Doe, 32, 1239 Spark st.
+  Emma, Doe, 34, 1235 Spark st.
+  Elizabeth, Doe, 36, 1234 Park st.
+  Elinor, Doe, 35, 1230 Park st.
+  Mary, Doe, 31, 1231 Park st.
+  Darcy, Doe, 32, 1224 Park st.
+  Grey, Doe, 34, 1214 Park st.
+  Lydia, Doe, 30, 1294 Park st.
+  Harriet, Doe, 32, 1324 Park st.
+
+```
+
+### RegEx
+
+### Convenient Methods
+
+* Strings
+  * `split`, `join`
+* Arrays
+  * `.pop`, `.push`, `.concat`, `.slice`, `.reverse`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
