@@ -7,7 +7,7 @@
 The following is a topical organization of the lesson notes.
 
 * prep_work
-  * [intro_git](/00/day_1/dawn/intro_git)
+  * [intro_git](week_00_prep_work/day_1/dawn_intro_git/)
   * [intro_js](/00/day_1/dawn/intro_js)
   * [intro_terminal](/00/day_1/dawn/intro_terminal)
 
