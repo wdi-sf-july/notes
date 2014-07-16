@@ -6,6 +6,7 @@
 
 ##DOM LEVEL II
 * https://developer.mozilla.org/fr/docs/DOM_Levels
+* http://www.quirksmode.org/js/contents.html#events
 
 ##Intro Testing
 
@@ -76,6 +77,7 @@ console.log(filteredNums)
 * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain
 * http://msdn.microsoft.com/en-us/magazine/ff852808.aspx
 * http://yehudakatz.com/2011/08/12/understanding-prototypes-in-	JavaScript/
+* http://bonsaiden.github.io/JavaScript-Garden/
 	
 ##OO Design
 * http://robotlolita.me/2011/10/09/understanding-javascript-oop.html
