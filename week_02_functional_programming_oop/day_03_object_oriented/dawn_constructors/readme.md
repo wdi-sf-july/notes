@@ -73,7 +73,7 @@ eval(locus);
 Using the `new` keyword, Javascript does a few thing.
  * Creates a new object
  * Sets the `constructor` property to the object Person
- You can use x.constructor to get a direct reference to C, but it's an anonymous function so there's no way of getting its name.
+ You can use x.constructor to get a direct reference to the object, but it's an anonymous function so there's no way of getting its name.
 
 
 
