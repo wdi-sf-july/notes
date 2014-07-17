@@ -1,6 +1,5 @@
 # Prototypical Inheritance
-## Tips and CoffeeScript
-
+## Tips
 
 | Objectives |
 | :---- |
