@@ -1,133 +1,36 @@
-# WDI JULY NOTES
-## Distributed Lesson Materials
+#Week 3 - Node
+This week we'll be working with Node, Express, Postgres. For interfacing with postgres we'll be using Sequelize
+
+##Tools
+We'll be using the following technologies this week. Feel free to read some of the intro materials on each site, specifically Node and Express.
 
 
-###  Topical Index
+* [Node.js Homepage](http://nodejs.org/) - Used for building network applications.
+* [Express Framework](http://expressjs.com/) - Used for building web apps
+* [Postgres](http://postgresapp.com/) - The database we'll be using
+* [Sequelize](http://sequelizejs.com/) - The npm package that we will use to interface postgres and node together
 
-The following is a topical organization of the lesson notes.
+##Optional Readings
+I haven't personally used all these, but some of these resources looks good.
 
-* prep_work
-  * [intro_git](/week_00_prep_work/day_1/dawn_intro_git/)
-  * [intro_js](/week_00_prep_work/day_1/dawn_intro_js)
-  * [intro_terminal](/week_00_prep_work/day_1/dawn_intro_terminal)
-* Intro JS
-  * [primatives: numbers, strings, arrays, objects](/week_01_programming_fundamentals_with_the_web/day_2_intro_to_js/dawn_js_primatives)
-  * [loops](/week_01_programming_fundamentals_with_the_web/day_2_intro_to_js/dusk_js_control_flow)
-  * [js functions](/week_01_programming_fundamentals_with_the_web/day_3_js_functions/dawn_js_functions)
-  * [more js functions] (/week_01_programming_fundamentals_with_the_web/day_3_js_functions/dusk_more_functions)
+###Server Related
+* [Felix's Node Beginner Guide](http:/* /nodeguide.com/beginner.html)
+* [Node Beginner Book](http://www.nodebeginner.org/) 
+* [Node School](http://nodeschool.io/) 
 
-* JS and The DOM
-  * [intro dom](/week_01_programming_fundamentals_with_the_web/day_4_html_css_dom_events/dusk_dom_events)
-* HTML and CSS
-  * [intro css](/week_01_programming_fundamentals_with_the_web/day_4_html_css_dom_events/dawn_html_css)
+> Feel free to try some google searches for 'node express'
 
-### Contributing 
+###Database Related
+Don't get too caught up on syntax, the following links talk about how things conceptually work. There can be slight syntax difference between different databases(mySQL, sqlite3, postgres, etc..)
 
-Below is an outline of how to add notes to this repository, navigate and develop the folder structure, as well as notes on maintaining the *Topical Index* above.
+* [Relational Database - Wikipedia](http://en.wikipedia.org/wiki/Relational_database)
+* [Relational databases for dummies](http://code.tutsplus.com/tutorials/relational-databases-for-dummies--net-30244)
+* [An Incredibly Brief Introduction to Relational Databases](http://www.oreillynet.com/pub/a/ruby/excerpts/ruby-learning-rails/intro-ruby-relational-db.html)
+* [Writing SQL Basics](http://technet.microsoft.com/en-us/library/bb264565(v=sql.90).aspx)
+*
 
 
-* Adding Notes
-	* Note: Always Update the **Topical Index**
-* Folder **Prefix** and **Suffix**
-* Sample Structure
-* Topical Index
-* ignored files
-
-#### Adding notes
-
-For each lesson the notes (if any) will be added to a `weekly_folder` in the repo in a subfolder related to that day's lesson materials separated into `dawn` or `dusk` day times. 
-
-A lesson on `Monday` in `week 2` in the `morning` on  **intro to css** would go in a `week_02_web_fundamentals` folder for `Week 2` under something like the following:
-
-```
-week_02_web_fundamentals/
-	day_1_intro_js_css/
-		dawn_intro_css/
-			...
-```
-
-Each `dawn` or `dusk` folder should have a markdown file containing relevant notes, 
-
-```
-week_02/
-	day_1_intro_js_css/
-		dawn_intro_css/
-			ReadMe.md
-
-``` 
-The **main** lesson notes should be added to the repo as a `ReadMe` **markdown** file, so GitHub can render something for that folder.
-
-#### IMPORTANT NOTE
-
->Each lesson added to the repo should update the `ReadMe` topical index, e.g. using the lesson above one would find the most relevant  **Topical Bullet** and add a sub-bullet for the new `sub-topic`.
-
-=====
-
-#### Folder Prefix and Suffix Explanation
-
-Each folder in the repo has a *naming convention* involving a *date or time **prefix*** and a *theme_of_the_datetime **suffix***,
-
-```
- time_or_date_prefix + the_overall_theme
-```
-
-For a **week** we might have the following:
-
-* Week 1 has a `week_1` **prefix** plus its *weekly theme* `programming_and_web_fundamentals` **suffix**.
-
-  ```
-  Week 1 => week_1_programming_and_web_fundamentals
-  ```
-* Day 1 in Week 1 would also have a suffix theme, e.g. *a concatenation of the lesson topics from the day at the very least.*
-
-  ```
-  day_1_intro_js_css/
-  ```
-* Dawn in Day 1 above would just have suffix that *is the **topic of the lesson***.
-
-  ```
-  dawn_intro_css/
-  ```
+>To find out more, try searching for 'relational database intro'
 
 
 
-
-#### Sample Structure
-
-```
-week_00_prep_work/
-  day_1_workflow_and_js/
-    dawn_terminal_and_git/
-        terminal_stuff.png
-        git_stuff.png
-        ReadMe.md
-    dusk_intro_js/
-        cool_js.png
-        ReadMe.md
-  day_2_more_js/
-    dawn_conditionals/
-      ...
-    dusk_advanced_control_flow/
-      ...
-  ...
-week_01_intro_web/
-  day_1_the_web_and_html/
-    ...
-  day_2_js_fundamentals/
-    ...
-  ...
-...
-
-```
-
-#### Topical Index
-Links in the **Topical Index** are relative to the repo, so if one were to add `intro_git` as a link under the `prep_work` bullet it would be added as follows:
-
-```
-* prep_work
-  * [intro_git](/00/day_1/dawn/intro_git)
-```
-
-### Ignored Files
-
-If you're working on material you don't want commited then add the `working` prefix.
