@@ -1,6 +1,6 @@
-#Node
+#Intro to Express
 
-##Example web server
+##Example web server with Node
 The below is to demonstrate how Node can be used to create network applications. You can specify exactly how the behavior is.
 
 **server.js**
@@ -34,7 +34,7 @@ transfer encoding = chunked # streaming!
 
 ```	
 
-##Our first Node App
+##Our first Express App
 
 ###Setting up a project
 1. Create a new folder for use with the project using `mkdir node_calculator`, and cd into `cd node_calculator`
