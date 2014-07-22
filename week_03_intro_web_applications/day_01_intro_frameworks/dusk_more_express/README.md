@@ -49,6 +49,7 @@ app.get('/', function(req, res){
 
 ```
 
+without setting the `view engine` this will cause an error.
 
 ### BodyParser
 
