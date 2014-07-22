@@ -27,7 +27,7 @@ Write down the following sql statements that are required to solve the following
 3. Show all the data in the owners table.
 4. Show the names of all owners. 
 5. Show the ages of all of the owners in ascending order. 
-6. Show the name of any owner whose name is Donald. 
+6. Show the name of an owner whose name is Donald. 
 7. Show the age of all owners who are older than 30. 
 8. Show the name of all owners whose name starts with an E. 
 9. Add an owner named John who is 33 years old to the owners table.
@@ -37,9 +37,9 @@ Write down the following sql statements that are required to solve the following
 13. Add a property named Archstone that has 20 units. 
 14. Delete the owner named Jane. 
 15. Show all of the properties in alphabetical order that are not named Archstone and do not have an id of 3 or 5. 
-16. Count the total number of rows in the properties table 
-17. Show the highest age 
-18. Show the property with lowest number of units 
+16. Count the total number of rows in the properties table.
+17. Show the highest age of all owners.
+18. Show the property with lowest number of units.
 19. Show the first addition to the properties table.
 20. Show all of the information from the owners table and the properties table in one joined table.  
 ```
