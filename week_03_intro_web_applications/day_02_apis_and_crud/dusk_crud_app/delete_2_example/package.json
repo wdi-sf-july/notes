@@ -1,0 +1,17 @@
+{
+  "name": "delete_2_example",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.5.0",
+    "ejs": "^1.0.0",
+    "express": "^4.6.1",
+    "method-override": "^2.1.1"
+  }
+}
