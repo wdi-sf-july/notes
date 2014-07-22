@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <form method="post" action="/books/<%= book.id %>?_method=put">
+      <input type="text" name="book[title]" value="<%= book.title %>"><br>
+
+      <input type="text" name="book[author]" value="<%= book.author %>"><br>
+      <button>SAVE</button>
+    </form>
+  </body>
+</html>

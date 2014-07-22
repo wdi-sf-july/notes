@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    Books Index
+
+    <form method="post" action="/books/0?_method=delete">
+      <button> Delete Book 0 </button>
+    </form>
+
+
+    <% books.forEach(function(book){ %>
+      <h2> <%= book.title %> </h2>
+      <p> this is book <%= book.id %> </p>
+    <% }) %>
+  </body>
+</html>

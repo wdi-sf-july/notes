@@ -15,7 +15,6 @@ app.get('/books/', function(req, res) {
  * curl -X DELETE http://localhost:3000/books/0
  */
 app.delete('/books/:id', function(req, res) {
-  console.log(req.params.id);
   res.send("DELETED!");
 });
 
