@@ -16,7 +16,7 @@
 	+ name
 	+ number of units
 	+ owner_id 
-		+ There should also be a foreign key that references the owners table
+		+ There should be also be a foreign key that references the owners table
 
 ###Questions
 Write down the following sql statements that are required to solve the following tasks.
@@ -40,8 +40,9 @@ Write down the following sql statements that are required to solve the following
 16. Count the total number of rows in the properties table.
 17. Show the highest age of all owners.
 18. Show the property with lowest number of units.
-19. Show the first addition to the properties table.
-20. Show all of the information from the owners table and the properties table in one joined table.  
+19. Show the names of the first three owners in your owners table.
+20. Create a foreign key that references the owners table that forces the constraints FULL MATCH and ON DELETE NO ACTION. 
+21. Show all of the information from the owners table and the properties table in one joined table.  
 ```
 Bonus (this might require you to look up documentation online)
 
