@@ -16,7 +16,6 @@ More controller functionality using a faux DB for CRUD
   	* `action="/books?_method=DELETE"`
   	* custom `methodOveride`  	
   * DELETE
-  	* a delete link
   * PUT
     * handling forms
       * browsers and `POST` or `GET`
