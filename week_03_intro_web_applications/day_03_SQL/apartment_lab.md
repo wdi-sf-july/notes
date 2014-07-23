@@ -41,12 +41,12 @@ Write down the following sql statements that are required to solve the following
 17. Show the highest age of all owners.
 18. Show the property with lowest number of units.
 19. Show the names of the first three owners in your owners table.
-20. Create a foreign key that references the owners table that forces the constraints FULL MATCH and ON DELETE NO ACTION. 
+20. Create a foreign key that references the owner_id in the owners table and forces the constraint ON DELETE NO ACTION. 
 21. Show all of the information from the owners table and the properties table in one joined table.  
 ```
 Bonus (this might require you to look up documentation online)
 
 ```
-1. In the properties table change the name of the column name to property_name. 
+1. In the properties table change the name of the column "name" to "property_name". 
 2. Count the total number of properties where the owner_id is between 1 and 3.
 ```
