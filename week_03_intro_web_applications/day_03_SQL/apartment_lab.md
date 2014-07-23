@@ -15,7 +15,7 @@
 	+ property_id (this should be the primary key as well as a unique number that increments automatically)
 	+ name
 	+ number of units
-	+ owner_id 
+	+ owner_id (this should have the constraint NOT NULL)
 		+ There should be also be a foreign key that references the owners table
 
 ###Questions
@@ -39,10 +39,9 @@ Write down the following sql statements that are required to solve the following
 15. Show all of the properties in alphabetical order that are not named Archstone and do not have an id of 3 or 5. 
 16. Count the total number of rows in the properties table.
 17. Show the highest age of all owners.
-18. Show the property with lowest number of units.
-19. Show the names of the first three owners in your owners table.
-20. Create a foreign key that references the owner_id in the owners table and forces the constraint ON DELETE NO ACTION. 
-21. Show all of the information from the owners table and the properties table in one joined table.  
+18. Show the names of the first three owners in your owners table.
+19. Create a foreign key that references the owner_id in the owners table and forces the constraint ON DELETE NO ACTION. 
+20. Show all of the information from the owners table and the properties table in one joined table.  
 ```
 Bonus (this might require you to look up documentation online)
 
