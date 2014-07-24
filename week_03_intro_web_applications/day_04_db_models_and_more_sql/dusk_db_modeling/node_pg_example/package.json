@@ -1,0 +1,14 @@
+{
+  "name": "dusk_db_modeling",
+  "version": "0.0.0",
+  "description": "a lesson on db modeling",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^3.4.0"
+  }
+}
