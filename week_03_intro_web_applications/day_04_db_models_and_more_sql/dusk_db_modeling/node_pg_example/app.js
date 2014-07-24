@@ -26,9 +26,9 @@ db.connect = function(runAfterConnecting) {
     });
 };
 
-db.query = function(statement, callback){
+db.query = function(statement, params, callback){
   db.connect(function(client){
-    client.query(statement, callback);
+    client.query(statement, params, callback);
   })
 }
 
@@ -54,14 +54,45 @@ Book.all = function(somethingToDoAfter){
         if (err) {
             console.log(err);
         }
-        var books = [];
+        var results = [];
         res.rows.forEach(function(params){
-          books.push(new Book(params));
+          results.push(new Book(params));
         });
-        somethingToDoAfter(books)
+        somethingToDoAfter(results)
     })
 };
-Book.all(function(books){
-    console.log("The books are:", books);
+// Book.all(function(books){
+//     console.log("The books are:", books);
+// });
+
+
+
+db.query("INSERT INTO books (title, author) VALUES ($1, $2) RETURNING *",
+["The Great Gatsby", "Fitzgerald"], function(err, res){
+
+  console.log(res.rows)
+
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
