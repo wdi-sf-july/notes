@@ -248,4 +248,10 @@ DELETE from students WHERE name = 'Mary';
 /q
 ```
 
+ADD A FORIEGN KEY
+
+``` ALTER TABLE _____ ADD CONSTRAINT something_fk FOREIGN KEY (____) REFERENCES _____ (_____) ON DELETE NO ACTION; ```
+
+
+
 
