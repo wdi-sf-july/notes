@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <form method="POST" action="/authors/<%= author.dataValues.id %>/posts">
+      <input type="text" name="post[title]"><br>
+      <textarea name="post[body]">
+      </textarea><br>
+      <button> SAVE POST </button>
+    </form>
+  </body>
+</html>

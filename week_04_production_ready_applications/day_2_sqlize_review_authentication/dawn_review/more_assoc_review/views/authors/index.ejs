@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    All Authors:
+      <ul>
+        <% authors.forEach(function(author){ %>
+          <li> <a href="/authors/<%= author.dataValues.id %>" ><%= author.dataValues.firstname %></a></li>
+        <% }) %>
+      </ul>
+  </body>
+</html>
