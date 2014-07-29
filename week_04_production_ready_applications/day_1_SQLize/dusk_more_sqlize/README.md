@@ -140,7 +140,7 @@ Object.keys(db).forEach(function(modelName) {
 db.airplane.hasMany(db.passenger);
 db.passenger.belongsTo(db.airplane);
 
-// Example
+// Example 1
 db.passenger.create({name: "John Doe"})
   .success(function(passenger){
     db.airplane.find(1).success(function(airplane){
