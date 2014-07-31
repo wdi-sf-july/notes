@@ -29,16 +29,15 @@ db.airplane.hasMany(db.passenger);
 db.passenger.belongsTo(db.airplane);
 
 // Example
-
-db.airplane.find(1).success(function(airplane){
-    var passenger = db.passenger.build({name: "John Doe"})
-    airplane.setPassengers([passenger])
-      .success(function(airplane){
-        passenger.save();
-       console.log(airplane)
-    })
+db.passenger.create({name: "John Doe"})
+  .success(function(passenger){
+    db.airplane.find(1).success(function(airplane){
+      airplane.setPassengers([passenger])
+        .success(function(airplane){
+         console.log(airplane)
+      })
+    });
 });
-
 
 
 
