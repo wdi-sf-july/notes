@@ -12,6 +12,7 @@ app.use(bodyParser.urlencoded());
 // add middle to handle overiding POST requests
 // for both PUT and DELETE
 app.use(methodOverride("_method"));
+app.use(express.static(__dirname + "/public"));
 
 app.get("/books", function(req, res){
   res.render("library/index", {books: books})
