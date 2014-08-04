@@ -21,6 +21,27 @@ The following is a topical organization of the lesson notes.
 * HTML and CSS
   * [intro css](/week_01_programming_fundamentals_with_the_web/day_4_html_css_dom_events/dawn_html_css)
 
+## Object Oriented Programming
+
+* [intro constructors](/week_02_functional_programming_oop/day_3_object_oriented/dawn_constructors)
+* [intro prototypes](/week_02_functional_programming_oop/day_3_object_oriented/dusk_prototypes)
+* [intro to inheritance](/week_02_functional_programming_oop/day_4_prototypical_inheritance/dawn_proto_inheritance)
+
+## Functional Programming
+
+* [intro to iterators and higher order functions](/week_02_functional_programming_oop/day_5_review/iterators_testing_review)
+
+## Testing 
+
+* [intro to iterators](/week_02_functional_programming_oop/day_5_review/iterators_testing_review)
+
+## SQL
+
+* [intro to SQL](/week_03_intro_web_applications/day_03_SQL)
+* [SQL joins](/week_03_intro_web_applications/day_04_db_models_and_more_sql/dawn_joins)
+* [node postgres](/week_03_intro_web_applications/day_04_db_models_and_more_sql/dusk_db_modeling)
+
+
 ### Contributing 
 
 Below is an outline of how to add notes to this repository, navigate and develop the folder structure, as well as notes on maintaining the *Topical Index* above.
