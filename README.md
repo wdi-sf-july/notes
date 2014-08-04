@@ -15,23 +15,18 @@ The following is a topical organization of the lesson notes.
   * [loops](/week_01_programming_fundamentals_with_the_web/day_2_intro_to_js/dusk_js_control_flow)
   * [js functions](/week_01_programming_fundamentals_with_the_web/day_3_js_functions/dawn_js_functions)
   * [more js functions] (/week_01_programming_fundamentals_with_the_web/day_3_js_functions/dusk_more_functions)
-
 * JS and The DOM
   * [intro dom](/week_01_programming_fundamentals_with_the_web/day_4_html_css_dom_events/dusk_dom_events)
 * HTML and CSS
   * [intro css](/week_01_programming_fundamentals_with_the_web/day_4_html_css_dom_events/dawn_html_css)
-
 * Object Oriented Programming
   * [intro constructors](/week_02_functional_programming_oop/day_3_object_oriented/dawn_constructors)
   * [intro prototypes](/week_02_functional_programming_oop/day_3_object_oriented/dusk_prototypes)
   * [intro to inheritance](/week_02_functional_programming_oop/day_4_prototypical_inheritance/dawn_proto_inheritance)
-
 * Functional Programming
   * [intro to iterators and higher order functions](/week_02_functional_programming_oop/day_5_review/iterators_testing_review)
-
 * Testing 
   * [intro to iterators](/week_02_functional_programming_oop/day_5_review/iterators_testing_review)
-
 * SQL
   * [intro to SQL](/week_03_intro_web_applications/day_03_SQL)
   * [SQL joins](/week_03_intro_web_applications/day_04_db_models_and_more_sql/dawn_joins)
