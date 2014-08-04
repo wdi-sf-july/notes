@@ -29,7 +29,7 @@ The following is a topical organization of the lesson notes.
   * [intro to iterators](/week_02_functional_programming_oop/day_5_review/iterators_testing_review)
 * SQL
   * [intro to SQL](/week_03_intro_web_applications/day_03_SQL)
-  * [SQL joins](/week_03_intro_web_applications/day_04_db_models_and_more_sql/dawn_joins)
+  * [SQL joins](/week_03_intro_web_applications/day_04_db_models_and_more_sql/dawn_joins/joins_lesson)
   * [node postgres](/week_03_intro_web_applications/day_04_db_models_and_more_sql/dusk_db_modeling)
 
 
