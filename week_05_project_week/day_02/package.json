@@ -1,0 +1,17 @@
+{
+  "name": "integration_testing",
+  "version": "0.0.0",
+  "description": "a testing application",
+  "main": "app.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.5.2",
+    "express": "^4.7.4",
+    "method-override": "^2.1.2"
+  },
+  "devDependencies": {
+    "mocha": "^1.21.3"
+  }
+}
