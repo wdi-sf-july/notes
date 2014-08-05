@@ -11,4 +11,15 @@ describe("Creating friends", function(){
       .expect(302)
       .end(done)
   })
+
+  it ("should render user name on page", function(done){
+    request(app)
+      .get('/friends/1')
+      .expect(function(res){
+        if(res.text.indexOf('john') === -1){
+          throw new Error("Missing User Name!")
+        }
+      })
+      .end(done)
+  })
 })

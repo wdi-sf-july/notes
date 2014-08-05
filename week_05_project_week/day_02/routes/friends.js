@@ -18,7 +18,7 @@ router.get('/friends/new', function(req, res){
 
 router.get('/friends/:index', function(req, res){
   var index = req.params.index;
-  res.send(friends[index]);
+  res.send(friends[index]['name']);
 });
 
 router.get('/friends/:index/edit', function(req, res){
