@@ -7,6 +7,7 @@
 2. Make sure you have installed the heroku toolbelt - [https://toolbelt.heroku.com/](http://)
 
 ### To start:
+
 0. Create an app on heroku [https://dashboard.heroku.com/apps](https://) and click on create new app (always best to give it a name) and then click Create app.
 1. In terminal, set up your initial folder structure
 	
@@ -70,9 +71,11 @@
 Now run your migrations by typing in terminal ``` heroku run node_modules/.bin/sequelize db:migrate``` and you should have all your tables set up in a heroku hosted database
 
 ### Connect to your heroku DB using psql
+
 1. In terminal, type in heroku pg:psql and it should connect you to your DB
 
 ### Connect to your heroku DB using PG Commander:
+
 1. In the bottom left corner of PG Commander click New Favorite
 2. Put in the following information from your heroku database URL (to see this again just run in terminal: ``` heroku config```)
 3. Here is the pattern for the URL and the information you need to put into PG Commander ___do not include : or @ or / when inputting information___: 
@@ -80,6 +83,7 @@ Now run your migrations by typing in terminal ``` heroku run node_modules/.bin/s
 4. Once connected it should alert you that it cannot verify the identity of the server, just click connect anyway and you should be in
 
 ### I broke it...what do I do?
+
 Always, always, always start by looking at the heroku logs (in terminal, type ```heroku logs -t```). This will tell you any node/db errors you are having (you can think of heroku logs like your terminal, whenever you `console.log` something, you will see it here) and remember...___It happens___, here are some things to double check:
 
 1. Make sure you have named the file "Procfile" and that it is NOT in any sub-folders (it should be in the same folder as your app.js file)
@@ -96,6 +100,7 @@ Always, always, always start by looking at the heroku logs (in terminal, type ``
 3. We can't use the alias sqlize anymore, so when you run your migrations make sure to run `heroku run node_modules/.bin/sequelize SEQUELIZE_COMMAND`
 
 ### Heroku best practices
+
 - Store your secret information in config variables (this includes the password to your database!)
 	- To create a new config variable 	run this in terminal: `heroku config:set VARIABLE_NAME = VALUE` 
 	- To remove a variable name run in terminal: `heroku config: unset VARIABLE_NAME`
