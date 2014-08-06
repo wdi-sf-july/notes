@@ -8,7 +8,7 @@
 
 ### To start:
 
-0. Create an app on heroku [https://dashboard.heroku.com/apps](https://) and click on create new app (always best to give it a name) and then click Create app.
+0. Create an app on heroku [https://dashboard.heroku.com/](https://) and click on create new app (always best to give it a name) and then click Create app and then Finish up.
 1. In terminal, set up your initial folder structure
 	
 	```
@@ -37,7 +37,7 @@
 	heroku login
 	``` 
 7. Create your PORT config variable in terminal
-	``` heroku config set: PORT=80```
+	``` heroku config:set PORT=80 --app YOUR_APPLICATION_NAME```
 8. Add your remote to push to heroku (YOUR_APPLICATION_NAME is the name of the app you created on heroku.com)
 	``` heroku git:remote -a YOUR_APPLICATION_NAME ```
 9. Make sure you add/commit any additional changes ``` git commit -am "a nice message"``` and then push to heroku! ``` git push heroku master```
@@ -48,8 +48,8 @@
 
 1. In terminal, install the add-on for postgres
 	``` heroku addons:add heroku-postgresql:dev```
-2. This should create a DATABASE_URL config variable for you. If not, run ``` heroku config:set DATABASE_URL = (THE OTHER DB URL HEROKU HAS GIVEN)```
-3. Set your NODE_ENV variable to 'production' by running this command in terminal: ```heroku config set: NODE_ENV = 'production' ``` 
+2. This should create a DATABASE_URL config variable for you. If not, run ``` heroku config:set DATABASE_URL=(THE OTHER DB URL HEROKU HAS GIVEN) --app YOUR_APPLICATION_NAME```
+3. Set your NODE_ENV variable to 'production' by running this command in terminal: ```heroku config:set NODE_ENV='production' --app YOUR_APPLICATION_NAME``` 
 4. Make sure your production variables in config.json are set - ___this is very important___
 	- Here is the pattern for the URL and the information you need to put into your config.json file: do not include : or @ or / when inputting information 
 	- from my DATABASE_URL config variable: __postgres://rqxjyqeiamscql:GkcgTaqye4-dkctlaYf5DBWvBs@ec2-50-16-201-126.compute-1.amazonaws.com:5432/debb6gidjvnlpn__
@@ -93,7 +93,7 @@ Always, always, always start by looking at the heroku logs (in terminal, type ``
 5. Have you created a remote to push to heroku? Check with ```heroku remote -v```
 6. Check to see if for some reason you have a PORT variable declared in your .zshrc or .bashrc file by running echo $PORT (if you see anything, that's not good and you need to go in your .zshrc or .bashrc file and remove it). This sometimes overwrites the heroku variable and heroku doesn't get too happy about that...
 
-### But....I can't connect to my database! 
+### But....things are still breaking! 
 
 1. Did you __commit__ your most recent changes and push them to heroku? If you made any changes or installed any new modules, heroku will not know about it until you run ```git push heroku master```
 2. Is your `config.json` file is set up correctly? Make sure the NODE_ENV is set to 'production' and then check to see that the information from your DATABASE_URL variable match what is in the `config.json`
@@ -102,8 +102,8 @@ Always, always, always start by looking at the heroku logs (in terminal, type ``
 ### Heroku best practices
 
 - Store your secret information in config variables (this includes the password to your database!)
-	- To create a new config variable 	run this in terminal: `heroku config:set VARIABLE_NAME = VALUE` 
-	- To remove a variable name run in terminal: `heroku config: unset VARIABLE_NAME`
+	- To create a new config variable 	run this in terminal: `heroku config:set VARIABLE_NAME=VALUE --app YOUR_APPLICATION_NAME` 
+	- To remove a variable name run in terminal: `heroku config: unset VARIABLE_NAME --app YOUR_APPLICATION_NAME`
 	- To see all of your config variables run `heroku config`
 	- To reference your heroku variable in your code use  `process.env.VARIABLE_NAME` 
 	- Start fresh with a production database, but if you REALLY want your development database info to transfer to the production one use  `heroku pg:push NAME_OF_YOUR_LOCAL_DATABASE NAMEOF_HEROKU_CONFIG_DB --app YOUR_APPLICATION_NAME` (note, your heroku DB __must__ be empty for this to run)
