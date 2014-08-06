@@ -40,8 +40,9 @@
 	``` heroku config:set PORT=80 --app YOUR_APPLICATION_NAME```
 8. Add your remote to push to heroku (YOUR_APPLICATION_NAME is the name of the app you created on heroku.com)
 	``` heroku git:remote -a YOUR_APPLICATION_NAME ```
-9. Make sure you add/commit any additional changes ``` git commit -am "a nice message"``` and then push to heroku! ``` git push heroku master```
-10. If there are no errors, check out your app by going to the url provided at the end of the push or type in ```heroku open```
+9. In terminal, type in heroku ps:scale web=1
+10. Make sure you add/commit any additional changes ``` git commit -am "a nice message"``` and then push to heroku! ``` git push heroku master```
+11. If there are no errors, check out your app by going to the url provided at the end of the push or type in ```heroku open```
 
 
 ### Connect a DB with sequelize (this should be done ONLY after you have set up your local database and ran all migrations successfully):
