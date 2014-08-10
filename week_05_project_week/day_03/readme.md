@@ -42,7 +42,8 @@
 	``` heroku git:remote -a YOUR_APPLICATION_NAME ```
 9. In terminal, type in heroku ps:scale web=1
 10. Make sure you add/commit any additional changes ``` git commit -am "a nice message"``` and then push to heroku! ``` git push heroku master```
-11. If there are no errors, check out your app by going to the url provided at the end of the push or type in ```heroku open```
+11. If you are having an issue with your RSA key or it is prompting you to type a password, enter in terminal ``` ssh-keygen -t rsa``` and press enter until you are brought back to your terminal prompt. When that is done, type in ```heroku keys:add``` and try ```git push heroku master``` again.
+12. If there are no errors, check out your app by going to the url provided at the end of the push or type in ```heroku open```
 
 
 ### Connect a DB with sequelize (this should be done ONLY after you have set up your local database and ran all migrations successfully):
@@ -99,6 +100,8 @@ Always, always, always start by looking at the heroku logs (in terminal, type ``
 1. Did you __commit__ your most recent changes and push them to heroku? If you made any changes or installed any new modules, heroku will not know about it until you run ```git push heroku master```
 2. Is your `config.json` file is set up correctly? Make sure the NODE_ENV is set to 'production' and then check to see that the information from your DATABASE_URL variable match what is in the `config.json`
 3. We can't use the alias sqlize anymore, so when you run your migrations make sure to run `heroku run node_modules/.bin/sequelize SEQUELIZE_COMMAND`
+4. Did you accidentally forget to create config variables for your keys? Remember to add your keys using heroku config:set VARIABLE_NAME=VALUE
+5. Is there anything in your .gitignore file that heroku needs?
 
 ### Heroku best practices
 
