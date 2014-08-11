@@ -16,6 +16,10 @@ describe("Creating friends", function(){
     request(app)
       .get('/friends/1')
       .expect(function(res){
+    
+        if(res.text === ""){
+          throw new Error("NO RESPONSE TEXT")
+        }
         if(res.text.indexOf('john') === -1){
           throw new Error("Missing User Name!")
         }

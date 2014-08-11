@@ -1,8 +1,7 @@
-var express = require('express')
+var express = require('express'),
+ router = express.Router();
 
 var friends = [{name: "john doe"}];
-
-var router = express.Router();
 
 router.get('/friends', function (req, res) {
   var names = friends.reduce(function(names, friend){
@@ -17,8 +16,9 @@ router.get('/friends/new', function(req, res){
 });
 
 router.get('/friends/:index', function(req, res){
+  console.log("Friends:", friends)
   var index = req.params.index;
-  res.send(friends[index]['name']);
+  res.send(friends[index].name);
 });
 
 router.get('/friends/:index/edit', function(req, res){
@@ -26,8 +26,10 @@ router.get('/friends/:index/edit', function(req, res){
 });
 
 router.post('/friends', function (req, res) {
+  console.log(req.body)
   friends.push(req.body.friend);
   res.redirect('/friends');
 });
+
 
 module.exports = router;
