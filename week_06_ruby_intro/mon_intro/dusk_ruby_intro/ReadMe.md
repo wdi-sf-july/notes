@@ -124,8 +124,7 @@ Let's recall some of our JS Data Types
 #### Ruby	
 
  * Function
-	* Anonymous: `function (param1, [..param2, [...]]){...}`, 
-	* Named: `function Name(param1, [..param2, [...]]){...}`
+ 	* uses `def` 
 	* Do not capture scope
 	* Not used as values
 	* optional parameters must be specified
