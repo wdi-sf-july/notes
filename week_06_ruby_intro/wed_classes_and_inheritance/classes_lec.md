@@ -146,7 +146,7 @@ We can now *get* and *set* the name of a person using the  methods we created fo
 ### attr_reader, attr_writer, attr_accessor
 
 
-In ruby, the practice of creating a *getter* method is so common their is a shorthand that can be used at the top of a class definition called `attr_reader`.
+In ruby, the practice of creating a *getter* method is so common there is a shorthand that can be used at the top of a class definition called `attr_reader`.
 
 	class Person
 		
