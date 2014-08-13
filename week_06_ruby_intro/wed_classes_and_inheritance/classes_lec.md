@@ -298,28 +298,6 @@ or use a mixture of both
 			end
 	end
 
-**Protected methods** are similar expect that they are accessible from when an object of the same type.
-
-	class Person
-		
-		...
-		def make_safe_talk(person)
-			person.safe_talk
-		end
-		
-		
-		protected
-			def safe_talk
-				"whispers are heard!"
-			end
-	end
-
-so in terminal
-
-	> per1 = Person.new('john')
-	> per2 = Person.new('jane')
-	> per1.make_safe_talk(per2)
-	=> "whispers are heard!"
 
 ### Chainable methods
 
