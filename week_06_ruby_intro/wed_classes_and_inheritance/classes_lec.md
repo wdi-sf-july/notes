@@ -3,7 +3,7 @@
 
 Learning Objectives
 ====================
-* Understand difference between obbjects and classes
+* Understand difference between objects and classes
 * Understand how objects are referenced 
 * Understand getters and setters
 * Understand `attr_writer`, `attr_reader`, `attr_accessor`
