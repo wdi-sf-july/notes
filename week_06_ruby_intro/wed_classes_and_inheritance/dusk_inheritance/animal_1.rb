@@ -5,6 +5,10 @@ class Animal
     @state = "awake"
   end
   
+  def self.greet
+    puts "hello"
+  end
+
   def eat(food)
     if @state == "awake"
       puts "NOM-nom!!"

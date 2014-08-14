@@ -23,25 +23,3 @@ class Animal
     @state = "awake"
   end
 end
-
-class Person < Animal
-    @@banned_foods = /person|people|human|humans|woman|woman|children|child|baby|babies/i
-
-    def initialize(age, gender, name)
-        # call the super initialize
-        super("person")
-        @age = age
-        @gender = gender
-        @name = name
-    end
-
-    # stop cannibalism!
-    def eat(food)
-      unless @@banned_foods.match(food)
-        super(food)
-      else
-        puts "(cannibalism is not allowed!!)"
-      end
-      self
-    end
-end
