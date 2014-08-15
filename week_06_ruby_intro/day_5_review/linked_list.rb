@@ -1,13 +1,3 @@
-class Node
-    attr_accessor :value, :next
-    
-    def initialize
-      @value = nil
-      @next = nil
-    end
-end
-
-
 
 class List
   attr_accessor :head, :tail
@@ -21,13 +11,34 @@ class List
   def length
   end
   
-  def shift(val)
+  def shift
+    if @tail == nil
+      old_head = @head
+      @head = nil
+    else
+      old_head = @head
+      @head = @tail.head
+      @tail = @tail.tail
+    end
+    old_head
   end
 
   def unshift(val)
+    if @head == nil
+      @head = val
+    else
+      # creates the list
+      new_list = List.new
+      # uses the setter for head
+      #  to update the new_list
+      new_list.head = @head
+      new_list.tail = @tail
+      #update head
+      @head = val
+      @tail = new_list
+    end
+    self
   end
-  
-  
 
   def [](index)
   end
