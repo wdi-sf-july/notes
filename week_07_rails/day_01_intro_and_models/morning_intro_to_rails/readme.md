@@ -161,12 +161,7 @@ name.html.erb
 	```
 	@taco = "Hello instance taco!"
 	@array = [1,2,3]
-	@id = params['id'].to_i
-	@page = params[:page].to_i
 	```
-
-	Then print out params.inspect
-	or p params
 
 
 ## Misc
