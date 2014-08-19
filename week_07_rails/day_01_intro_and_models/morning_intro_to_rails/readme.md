@@ -80,7 +80,6 @@ You have to put any gem you want to use in your Gemfile. You have to run bundle 
 ## Create a controller and view
 
 - `rails generate controller demo index`
-- in the controller add the line `layout false`
 - add "Hello, World!" in the erb page
 
 - now how do we get to this page? What do we need? A route!
@@ -161,12 +160,7 @@ name.html.erb
 	```
 	@taco = "Hello instance taco!"
 	@array = [1,2,3]
-	@id = params['id'].to_i
-	@page = params[:page].to_i
 	```
-
-	Then print out params.inspect
-	or p params
 
 
 ## Misc
