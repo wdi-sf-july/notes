@@ -507,8 +507,6 @@ Let's finally put some `erb` in our `index` view.
 
 We've successfully made an `index`, `new`, and `create`. Next we will talk about adding a `show`, `edit`, and `update`
 
-In our controller we add a show action and route
-
 In routes.rb
 
 ```
@@ -528,4 +526,9 @@ And then we create a show view (show.html.erb) and input the information using:
 ```
 <h2><%= @plane.name %></h2>
 <p><%= @plane.kind %></p>
+```
+
+In our index page we can also include a link to the individual plane pages using
+```
+<a href = "/planes/<%= plane.id %>">Show</a>
 ```
