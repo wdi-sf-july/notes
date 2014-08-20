@@ -58,7 +58,7 @@ Let's go back to our old Amazon example and create two models - Order and Item. 
 
 Validate that each order name and item name are never empty. 
 
-If you have modeled this relationship correctly you should be able to type order.items and item.order without an error
+If you have modeled this relationship correctly you should be able to assign a variable o = Order.create and then type o.items without an error. You should also be able to assign a variable i = Item.create and then type i.order without an error
 
 Once that's done - create five items and two orders and assign three items to order_id 1 and the remaining two items to order_id 2. Play around with some array methods you know (each, map, select, size) for each order.
 
