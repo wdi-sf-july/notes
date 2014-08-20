@@ -191,11 +191,13 @@ We want to create a *planes_controller*. **NOTE**: Controller names are always p
 
 Let's begin with the following 
 
+```
   class PlanesController < ApplicationController
     def index
       render text: "Hello, pilots."
     end
   end
+```
 
 We have defined the`PlanesController` *class*, given it the method `#index`, and told the `#index` to render a *text* response `'Hello, pilots.'`
 
