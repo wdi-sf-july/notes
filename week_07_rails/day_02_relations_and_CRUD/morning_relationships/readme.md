@@ -1,4 +1,4 @@
-# Relations
+# Relationships / Associations
 
 We've seen this topic before! Try to recall relationships/associations from Sequelize and with Rails - always remember
 
