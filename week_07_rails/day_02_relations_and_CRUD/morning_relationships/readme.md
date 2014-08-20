@@ -123,11 +123,6 @@ algebra.enrollments << enroll2
 ```
 
 ```
-science.enrollments << tim
-science.enrollments << elie
-```
-
-```
 elie.enrollments
 tim.enrollments
 algebra.enrollments
@@ -165,6 +160,13 @@ belongs_to :student
 - Student 
 has_many :enrollments 
 has_many :courses :through => :enrollments
+```
+
+Now let's try:
+
+```
+science.enrollments << tim
+science.enrollments << elie
 ```
 
 ### Class Exercise 3
