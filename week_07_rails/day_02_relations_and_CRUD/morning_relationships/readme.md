@@ -162,13 +162,6 @@ has_many :enrollments
 has_many :courses :through => :enrollments
 ```
 
-Now let's try:
-
-```
-science.enrollments << tim
-science.enrollments << elie
-```
-
 ### Class Exercise 3
 
 Let's add through to our previous example. 
