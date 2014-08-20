@@ -528,7 +528,7 @@ And then we create a show view (show.html.erb) and input the information using:
 <p><%= @plane.kind %></p>
 ```
 
-In our index page we can also include a link to the individual plane pages using
+In our index page we can also include a link to the individual plane page using
 ```
 <a href = "/planes/<%= plane.id %>">Show</a>
 ```
