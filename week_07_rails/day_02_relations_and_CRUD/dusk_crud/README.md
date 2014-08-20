@@ -506,3 +506,26 @@ Let's finally put some `erb` in our `index` view.
 ## Halfway there: Take off
 
 We've successfully made an `index`, `new`, and `create`. Next we will talk about adding a `show`, `edit`, and `update`
+
+In our controller we add a show action and route
+
+In routes.rb
+
+```
+get "/planes/:id", to: "planes#show"
+```
+
+In our controller
+
+```
+def show
+ id = params[:id]
+ @plane = Plane.find(id)
+```
+
+And then we create a show view (show.html.erb) and input the information using:
+
+```
+<h2><%= @plane.name %></h2>
+<p><%= @plane.kind %></p>
+```
