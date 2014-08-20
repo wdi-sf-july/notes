@@ -519,6 +519,7 @@ In our controller
 def show
  id = params[:id]
  @plane = Plane.find(id)
+end
 ```
 
 And then we create a show view (show.html.erb) and input the information using:
