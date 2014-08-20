@@ -1,0 +1,9 @@
+Hello, pilots!!
+
+<% @planes.each do |plane| %>
+  <div>
+    <h2><%= plane.name %></h2>
+    <p> <%= plane.kind %> </p>
+    <a href="/planes/<%= plane.id %>">Show</a>
+  </div>
+<% end %>
