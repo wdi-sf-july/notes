@@ -262,6 +262,7 @@ Now our application will have access to a model called `Plane` that will be pers
 We go straight into terminal to enter *rails console*.
 
   $ rails console
+  
 The command above enters the rails console to play with your application. 
 
 To create our first plane model in our database we use our reference the `Plane` class and call the `Plane#create` method to write our plane to our database.
