@@ -1,0 +1,13 @@
+<!-- index.html.erb -->
+
+
+<% @creatures.each do |creature| %>
+
+    <div>
+        <h2><%= creature.name %></h2>
+        <p>
+          <%= creature.description %>
+        </p>
+        <%= button_to  "Delete This?", creature_path(creature), method: :delete %>
+    </div>
+  <% end %>
