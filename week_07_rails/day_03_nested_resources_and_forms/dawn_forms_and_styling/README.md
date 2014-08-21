@@ -91,7 +91,7 @@ Now our app is up and running, [localhost:3000](localhost:3000/).
 Just put the third party css libraries in `vendor/assets` and for bootstrap just file it under stylesheets.
 
 ```
- curl https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css > vendor/assets/stylesheets/bootstrap-3.2.0.min.css
+ curl https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css > vendorCreature/assets/stylesheets/bootstrap-3.2.0.min.css
 ```
 ### Create A Creature 
 
@@ -110,7 +110,7 @@ We go straight into terminal to enter *rails console*.
 	> Creature.create({name: "Yoda", description: "Green little man"}) 
 	=> #<Creature ....>
 
-*This will avoid issues later with `index` trying to render planes that aren't there.*
+*This will avoid issues later with `index` trying to render Creatures that aren't there.*
 
 `db/seeds.rb`
 	
@@ -214,7 +214,7 @@ If you look at your views the `views/creatures` folder has already be created so
 
 
 
-### A new route for planes
+### A new route for Creatures
 
 The *RESTful* convention would be to make a form available at `/creatures/new`. Let's add this route.
 
@@ -229,9 +229,9 @@ The *RESTful* convention would be to make a form available at `/creatures/new`. 
 		
 	end
 
-### A new method for planes
+### A new method for Creatures
 
-The request for `/planes/new` will search for a `planes#new`, so we must create a method to handle this request. This will render the `new.html.erb` in the `app/views/planes` folder.
+The request for `/Creatures/new` will search for a `Creatures#new`, so we must create a method to handle this request. This will render the `new.html.erb` in the `app/views/Creatures` folder.
 
 `app/controllers/creatures_controller.rb`
 
@@ -248,9 +248,9 @@ The request for `/planes/new` will search for a `planes#new`, so we must create 
 
 
 
-### A new view for planes
+### A new view for Creatures
 
-Let's create the `app/views/planes/new.html.erb` with a form that the user can use to sumbit new planes to the application. Note: the action is `/planes` because it's the collection we are submiting to, and the method is `post` because we want to create.
+Let's create the `app/views/Creatures/new.html.erb` with a form that the user can use to sumbit new Creatures to the application. Note: the action is `/Creatures` because it's the collection we are submiting to, and the method is `post` because we want to create.
 
 `app/views/creatures/new.html.erb`
 
@@ -308,7 +308,7 @@ Let's create `creatures#create` method
 		
 	end
 
-#### A smarter new view for planes
+#### A smarter new view for Creatures
 
 
 Let's update our `creatures#new` method 
@@ -418,7 +418,7 @@ The `#create` method redirects to `#index` (the `/creaures` path), but this isn'
 
 ## Part II: Setup Edit, Update, and Delete
 
-Editing a plane model requires two seperate methods. One to display the model information to be edited by the client, and another to handle updates submitted by the client.
+Editing a Creature model requires two seperate methods. One to display the model information to be edited by the client, and another to handle updates submitted by the client.
 
 If look back at how we handled the getting of our `new` form we see the following pattern.
 
@@ -566,7 +566,7 @@ The only difference now is that we will need to use the `id` of the object being
 		end
 		
 	Note the method we now need to create is called `#update`
-* In the `PlanesController` we will create the `#update` method mentioned above
+* In the `CreaturesController` we will create the `#update` method mentioned above
 	
 	`app/controllers/creatures_controller.rb`
 	
@@ -576,7 +576,7 @@ The only difference now is that we will need to use the `id` of the object being
 			
 			def update
 				creature_id = params[:id]
-				creature = Creature.find(plane_id)
+				creature = Creature.find(Creature_id)
 				
 				# get updated data
 				updated_attributes = params.require(:creatue).permit(:name, :description)
