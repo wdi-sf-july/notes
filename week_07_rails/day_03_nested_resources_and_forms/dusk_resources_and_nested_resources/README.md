@@ -69,7 +69,7 @@ Let's add some more seed data
 
 `db/seeds.rb`
 
-```
+```ruby
 yoda = Creature.create({name: "Yoda", description: "little green man"})
 luke = Creature.create({name: "Luke", description: "Young Jedi"})
 vader = Creature.create({name: "Darth Vader", description: "Father of luke"})
