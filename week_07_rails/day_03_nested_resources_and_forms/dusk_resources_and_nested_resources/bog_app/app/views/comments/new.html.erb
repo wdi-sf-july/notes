@@ -1,0 +1,19 @@
+<!-- new.html.erb -->
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-offset-4 col-xs-4">
+      <h2><%= @creature.name %></h2>
+      <p>
+        <%= @creature.description %>
+      </p>
+    </div>
+  </div>
+  <%= form_for [@creature, @comment] do |f| %>
+    <%= f.text_field :title, class: "form-control" %><br>
+    <%= f.text_area :body, class: "form-control" %> <br>
+    <%= f.submit "Save Content", class: "btn btn-primary"%>
+  <% end %>
+</div>

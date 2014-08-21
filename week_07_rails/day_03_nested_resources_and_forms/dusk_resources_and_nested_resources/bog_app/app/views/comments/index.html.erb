@@ -1,0 +1,19 @@
+<!-- index.html.erb -->
+
+
+    <div>
+        <h2><%= @creature.name %></h2>
+        <p>
+          <%= @creature.description %>
+        </p>
+    </div>
+
+    <div>
+      <h2> Comments </h2>
+      <% @comments.each do |comment| %>
+        <div>
+          <h3><%= comment.title %></h3>
+          <p> <%= comment.body %> </p>
+        </div>
+      <% end %>
+    </div>
