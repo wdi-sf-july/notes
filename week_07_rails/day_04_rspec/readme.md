@@ -13,7 +13,6 @@ ______________
 2. **Model Specs** https://www.relishapp.com/rspec/rspec-rails/docs/model-specs  
 3. **Request Specs** https://www.relishapp.com/rspec/rspec-rails/docs/request-specs/request-spec  
 4. **Matchers**  https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-
 5. **Model Specs Example** https://github.com/wdi-sf-july/validation_tests
 6. **Controller Specs Example** https://github.com/tlicata/rails_blog_lab
 
