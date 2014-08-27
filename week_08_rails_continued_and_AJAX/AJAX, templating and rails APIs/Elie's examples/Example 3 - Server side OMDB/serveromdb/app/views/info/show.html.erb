@@ -1,0 +1,22 @@
+<p>
+	Title: <%= @movie_result["Title"] %>
+</p>
+<p>
+	Year: <%= @movie_result["Year"] %>
+</p>
+<p>
+	Plot: <%= @movie_result["Plot"] %>
+</p>
+<p>
+	<%= link_to "Search Again", (info_index_path) %>
+</p>
+<p>
+
+	<%= form_tag @favorite do |f|  %>
+	<%= text_field_tag "title", @movie_result["Title"] %>
+	<%= submit_tag "Add to Favorites"%>
+
+
+	<% end %>
+
+</p>

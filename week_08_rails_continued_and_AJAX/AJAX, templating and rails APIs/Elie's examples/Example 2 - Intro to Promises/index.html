@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+	.box {
+		width: 200px;
+		height: 200px;
+		background-color: green;
+		display: inline-block;
+		margin-right: 30px;
+	}
+	</style>
+</head>
+<body>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+	<script>
+
+	$("div.box").each(function(i){
+		// let's use jquery to fade things out sequentially
+		$(this).delay(1000 * i++).fadeOut(1000);
+		//how can we fire something when these are all done?
+	}).promise().done(function(){
+		console.log("All done!");
+	});
+
+	movieQuery = function(search){
+    $.ajax({
+      url: "http://www.omdbapi.com/",
+			data: {s: search},
+			success: function(response){
+				console.log("AJAX CALL IS ALL DONE!");
+				console.log(response);
+			}
+    });
+};
+
+	var result = movieQuery('titanic');
+	console.log("This is my titanic result query");
+	console.log(result);
+
+    movieQuery = function(search){
+        return $.ajax({
+            url: "http://www.omdbapi.com/",
+            data: {s: search},
+        }).promise();
+};
+
+	movieQuery('titanic').then(function(result){
+			console.log("This is using a promise")
+	    console.log(result);
+	});
+
+
+	movieQuery = function(search){
+
+		return $.ajax({
+			url: "http://www.omdbapi.com/",
+			data: {s: search},
+		});
+	};
+
+	$.when(movieQuery('The Matrix')).done(function(result1){
+		console.log("This is my titanic result query using $.when");
+		console.log(result1);
+	});
+
+	$.when(movieQuery('The Matrix'), movieQuery('Titanic'), movieQuery('Saving Private Ryan')).done(function(result1, result2, result3){
+
+		console.log("Matrix")
+		console.log(JSON.parse(result1[0]).Search);
+		console.log("Titanic")
+		console.log(JSON.parse(result2[0]).Search);
+		console.log("SPR")
+		console.log(JSON.parse(result3[0]).Search);
+		console.log("All done!");
+	});
+
+	</script>
+
+</body>
+</html>

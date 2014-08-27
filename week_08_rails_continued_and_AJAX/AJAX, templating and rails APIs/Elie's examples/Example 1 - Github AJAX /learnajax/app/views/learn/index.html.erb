@@ -1,0 +1,10 @@
+
+<%= form_tag 'javascript:void(0)', class: "getInfo" do %>
+<%= label_tag "name", "Search for:" %>
+<%= text_field_tag '', nil, id: "name", class: "repoName", autofocus: true %>
+<%= submit_tag ("Click me for repo info!") %>
+<% end %>
+
+<div class="userData">
+
+</div>

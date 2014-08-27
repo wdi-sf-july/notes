@@ -1,0 +1,18 @@
+<% if @results["Search"] == nil %>
+    <p>
+      That movie title doesn't exist!
+    </p>
+<%else%>
+
+    <% @results["Search"].each do |x| %>
+        <p>
+        	 <a href="http://localhost:3000/info/<%=x["imdbID"]%>"><%= x["Title"] %></a>
+        </p>
+        <p>
+        	<%= x["Year"] %>
+        </p>
+
+      <% end %>
+    <%end%>
+
+<%= link_to "Search Again", (info_index_path) %>

@@ -1,0 +1,22 @@
+<div class="container">
+	<div class="text-center">
+		<h2>Search for movies</h2>
+
+		<%= form_tag ('javascript:void(0);'), class: "movieSearch" %>
+			<p>
+				<%= label_tag "title" %>
+				<%= text_field_tag "title", nil, autofocus: true %>
+			</p>
+			<p>
+				<%= submit_tag "Search" , class: "btn btn-info" %>
+			</p>
+
+		<div class="loading">
+			<%= image_tag "loader.gif", style: "margin-top:20px; width:100px;" %>
+		</div>
+
+		<div id="movieData">
+
+		</div>
+	</div>
+</div>
