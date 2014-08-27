@@ -7,6 +7,8 @@ $.ajax({
         tags: "pug",
         format: "json"
     },
+    dataType: "jsonp",
+    jsonp: "jsoncallback",
     success: function(response) {
         response.items.forEach(function (itm) {
             var html = template(itm);
