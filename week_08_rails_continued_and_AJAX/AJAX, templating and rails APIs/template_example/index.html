@@ -5,9 +5,44 @@
   <title>Template</title>
 </head>
 <body>
+  <script id="entry-template" type="text/x-handlebars-template">
+    {{#each items}}
+
+    <li>{{job}}</li>
+
+    {{#if age}}
+    <li>{{{age}}}</li>
+    {{else}}
+    <li>No age specified</li>
+    {{/if}}
+
+    {{#if name.first}}
+    <li>{{fullname name}}</li>
+    {{else}}
+    <li>{{name}}</li>
+    {{/if}}
+
+    {{/each}}
+  </script>
   <ul class="people"></ul>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="handlebars.js"></script>
   <script src="data.json"></script>
+  <script type="text/javascript">
+    Handlebars.registerHelper("fullname", function (name, options) {
+      return name.first + " " + name.last
+    });
+
+    var source = $("#entry-template").html();
+    var template = Handlebars.compile(source);
+    var html = template(data);
+    $(".people").append(html);
+  </script>
 </body>
 </html>
+
+    <!-- We can do our loops in JavaScript or in our templates -->
+    <!-- for (var i = 0; i < data.items.length; i++) { -->
+    <!--     var html = template(data.items[i]); -->
+    <!--     console.log("html", html); -->
+    <!-- } -->
