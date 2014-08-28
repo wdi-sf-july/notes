@@ -1,12 +1,12 @@
-<% if @results["Search"] == nil %>
+<% if @results == nil %>
     <p>
       That movie title doesn't exist!
     </p>
 <%else%>
 
-    <% @results["Search"].each do |x| %>
+    <% @results.each do |x| %>
         <p>
-        	 <a href="http://localhost:3000/info/<%=x["imdbID"]%>"><%= x["Title"] %></a>
+        	 <a href="/info/<%=x["imdbID"]%>"><%= x["Title"] %></a>
         </p>
         <p>
         	<%= x["Year"] %>

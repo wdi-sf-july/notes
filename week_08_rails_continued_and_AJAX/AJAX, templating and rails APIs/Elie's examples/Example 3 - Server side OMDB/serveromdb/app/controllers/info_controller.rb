@@ -10,7 +10,7 @@ class InfoController < ApplicationController
       :params => {:s => @query}
       )
 
-		@results = JSON.parse(request.body)
+		@results = JSON.parse(request.body)["Search"]
 
     puts @results
 
