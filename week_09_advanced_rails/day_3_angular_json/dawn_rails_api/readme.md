@@ -23,6 +23,8 @@ Lets create some controller to interact with things
 render json: Thing.all
 ```
 ### respond_to block
+We can use the `respond_to` block to allow both html and json.
+
 ```
  respond_to do |format|
     format.html  
@@ -34,21 +36,27 @@ In this example, the format.html allows us to use the default view with this act
 The format.json we can specify instructions to pass to a json render
 
 We can reach the .json rendering by .json
+
+`format.html { redirect_to @thing }`
   
 
 ### respond_to :json, :html
-We can use the respond_to block to allow both html and json.
+We can also specify conditions at the start of our controller
+
+
+`respond_to :json, :html`
+
+
 
 ```
-    respond_to do |format|
-       format.html
-       format.json  { render :json => @things}
-     end
+  respond_to :json, :html
+
+  def index
+    respond_with Book.all
+  end
 ```
 
-If this was part of a create, you can even pass redirects as part of the format.html porition
 
-`format.html { redirect_to @thing }`
 
 ###setup private methods
 There is still a bit of redundant code on your controller to be an api.
