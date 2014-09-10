@@ -87,3 +87,43 @@ We only need  set_thing on certain actions
   before_action :set_book, only: [:show, :update, :destroy]
 ```
 
+##Final Version
+```
+class ThingsController < ApplicationController
+
+  before_action :set_thing, only: [:show, :update, :destroy]
+  respond_to :json
+
+  def index
+    respond_with Thing.all
+  end
+
+  def create
+    respond_with Thing.create(thing_params)
+  end
+
+  def show
+    respond_with @thing
+  end
+
+  def update
+    respond_with @thing.update(thing_params)
+  end
+
+  def destroy
+    respond_with @thing.destroy
+  end
+
+  private
+
+  def set_thing
+    @thing = Thing.find(params[:id])
+  end
+
+  def thing_params
+    params.require(:thing).permit(:name, :desc)
+  end
+
+end
+
+```
