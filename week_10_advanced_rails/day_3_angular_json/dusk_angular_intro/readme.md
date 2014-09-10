@@ -132,4 +132,8 @@ Angular comes with quite a few built in directives and even allows you to create
 
 ### Some additional reading about scope in angular
 
+<http://www.ng-newsletter.com/posts/beginner2expert-scopes.html>
+
 <https://github.com/angular/angular.js/wiki/Understanding-Scopes>
+
+
