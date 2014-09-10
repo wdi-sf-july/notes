@@ -1,0 +1,159 @@
+<!-- EXAMPLE 9 -->
+<style>
+	.val {
+		font-size: 22px;
+	}
+	.over {
+		color:green;
+		font-family: georgia;
+	}
+	.under {
+		color:red;
+		font-family: helvetica;
+	}
+	li {
+		list-style: none;
+	}
+
+</style>
+
+<!-- EXAMPLE 1 START WITH THIS! -->
+<h2>PARENT</h2>
+<input type="text" ng-model ="num">
+<h4>{{num}}</h4>
+
+<div ng-controller="IndexCtrl">
+
+	<h2>CHILD</h2>
+		<input type="text" ng-model ="num">
+		<h4>{{num}}</h4>
+
+	<h1>Example 2 - Angular binding</h1>
+	  <h2>{{title}}</h2>
+
+	  <h3>{{1+2}}</h3>
+
+		Using ng-bind:  <h1 ng-bind ="instructor.first + ' ' + instructor.last "></h1>
+		Using curly braces: <h1>{{instructor.first}} {{instructor.last}}</h1>
+
+
+	<h1>Example 3 - ng-style</h1>
+	   	<input type="button" value="set color" ng-click="myStyle={color:'red'}">
+	   	<input type="button" value="set background" ng-click="myStyle={backgroundColor:'red'}">
+			<input type="button" value="clear" ng-click="myStyle={}">
+			<br>
+			<span ng-style="myStyle">Color me!</span>
+	<br>
+	<br>
+
+	<h1>Example 4 - ng-show and ng-hide</h1>
+	<input type="checkbox" ng-model = "checked" id = "check"> <label for="check">Show text?</label>
+
+	<br>
+
+	<div ng-show = "checked">
+		Hello world, I'm truthy!!
+	</div>
+
+	<div ng-hide = "checked">
+		Hello world, I'm falsey!!
+	</div>
+
+	<br>
+	<h1>Example 5 ng-repeat</h1>
+	<h2>Here are my colorful friends!</h2>
+	<div ng-repeat = "friend in friends">
+		<span ng-style = "{color: '{{friend.style}}'} ">{{friend.name}}</span><br>
+	</div>
+<!--
+	<h1>Example 6 ng-style and ng-model</h1>
+	<h2>Type in your favorite color</h2>
+	<input type="text" ng-model="favoriteColor">
+	 <h3 ng-style="{color: favoriteColor || 'purple'}">This must be your favorite color!</h3> -->
+
+	<h1>Example 7 ng-model and ng-list</h1>
+	<h2>Let's take a look at ng-list!</h2>
+	<input ng-model="names" ng-list='/[-|,|\s]/'>
+	{{names}}
+
+	<h1>Example 8 - $watch and ng-hide</h1>
+	<div class = "magic" ng-hide = "removed">
+	<br>
+		Let's see if you know the password...
+		<input class = "magicInput" type="text" ng-model ="typing" placeholder ="type for some magic" style = "width:300px;">
+
+			<h2>{{typing}}</h2>
+	</div>
+	<h3>{{notice}}</h3>
+
+	<h1>Example 9 -Counter with styling example + ng-click</h1>
+
+	<p ng-class = "{'over': value >0, 'under' : value <0}">
+		<span class="val">{{value}}</span>
+	</p>
+
+	<button ng-click = "addOne()">
+		Add One
+	</button>
+
+	<button ng-click = "subtractOne()">
+		Subtract One
+	</button>
+
+	<h1>Example 10 - ng-pluralize, ng-repeat, ng-submit, filters</h1>
+	<h3>  We have {{books.length}}
+	  <ng-pluralize count = "books.length" when ="{'1' : 'book', 'other' : 'books'}">
+	  </ng-pluralize>
+	</h3>
+
+		<p style = "color:red"; ng-if = "books.length ==0"> Sorry we're all out!</p>
+	  <div ng-if = "books.length > 0">
+
+	  	Search through our catalog here:
+
+	  <input type="search" ng-model="search" placeholder="filter books..." />
+	  	<br>
+	  	<ul ng-repeat = "book in books | filter:search | orderBy: '-rating' | limitTo: 5">
+			Re-ordered index - {{$index}}
+			Actual index - {{books.indexOf(book)}}
+	  		<li>
+	  			{{book.title | makeUppercase}}
+	  		</li>
+	  		<li>
+	  			Rating - {{book.rating}}
+	  		</li>
+	  		<li>
+	  			Price - {{book.price | addTax : .15 | currency}}
+	  		</li>
+	  		<li>
+	  			<button ng-click ="boughtBook(book)">Buy this Book </button>
+
+					<!-- this breaks once we start ordering the array around! -->
+	  			<!-- <button ng-click ="boughtBook($index)">Buy this Book </button> -->
+
+	  		</li>
+
+	  	</ul>
+
+	</div>
+
+	<h1>Example 11</h1>
+	<form action="javascript:void(0);" ng-submit="add()">
+	<p>
+		<label for="title">Title</label>	<input type="text" id="title" ng-model = "new_title">
+	</p>
+	<p>
+		<label for="rating">Rating</label><input type="number"  min="0" max="5" id="rating" ng-model = "new_rating">
+	</p>
+	<p>
+		<label for="price">Price</label><input type="text" id="price" ng-model = "new_price">
+	</p>
+	<p>
+
+		<input type="submit" ng-model ="formValue" value="Add a new book">
+	</p>
+
+	</form>
+	<button ng-click = "cancel()">Cancel</button>
+
+</div>
