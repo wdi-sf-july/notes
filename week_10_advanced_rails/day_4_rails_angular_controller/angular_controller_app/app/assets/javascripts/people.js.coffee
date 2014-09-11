@@ -1,7 +1,10 @@
-window.PersonCtrl = ($scope)->
+window.PersonCtrl = ($scope) ->
   $scope.people = []
 
-  $scope.handleSubmit = (person)->
-    console.log(this)
-    $scope.people.push()
-    person = {}
+  $scope.handleSubmit = ->
+    console.log(@person)
+    @people.push(@person)
+    # person set to empty object
+    @person = {}
+
+
