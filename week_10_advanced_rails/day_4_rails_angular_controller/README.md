@@ -20,7 +20,7 @@ require it in the `app/assets/javascripts/application.js`
 `app/assets/javascripts/application.js`
 
 ```js
-//= require angular-1.2.24.min
+//= require angular-1.2.24/angular.min
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
@@ -149,6 +149,82 @@ App.controller("PersonCtrl", ["$scope", ($scope)->
 		this.person = {}
 ])
 ```
+
+
+### Multiple Controllers
+
+Adding multiple controllers is straightforward
+
+```coffee
+App = angular.module("App", [])
+
+App.controller("PersonCtrl", ["$scope", ($scope)->
+	
+	$scope.people = []
+	
+	$scope.handleSubmit = ()->
+		$scope.people.push(this.person)
+		this.person = {}
+])
+
+App.controller("PetsCtrl", ["$scope", ($scope)->
+	$scope.pets = []
+	
+	$scope.handleSubmit = ()->
+		$scope.pets.push(this.pet)
+		this.pet = {}
+])
+```
+### Nesting Controllers
+
+When we nest controllers we inherit from the containing controller prototypically. This means it's time to break out your inheritance diagrams. 
+
+
+
+```html
+<div ng-controller="PersonCtrl">
+	<form ng-submit="handleSubmit()">
+		<div>
+			<input ng-model="person.firstName">
+		</div>
+		<div>
+			<input ng-model="person.lastName">
+		</div>
+		<button>Save</button>
+	</form>
+	
+	<div ng-repeat="person in people" ng-controller="PetsCtrl">
+		<form ng-submit="handleSubmit()">
+			<div>
+				<input ng-model="person.firstName">
+			</div>
+			<div>
+				<input ng-model="person.lastName">
+			</div>
+			<button>Save</button>
+		</form>
+		{{ person.firstName }} {{ person.lastName }}
+		<div ng-repeat"pet in person.pets">
+			{{pet.name}}
+		</div> 
+	</div>
+</div>
+```
+
+Now let's update our `PetsCtrl`
+
+```coffee
+
+App.controller("PetsCtrl", ["$scope", ($scope)->
+	$scope.pets = []
+	
+	$scope.handleSubmit = ()->
+		$scope.person.pets = $scope.person.pets || [];
+		$scope.person.pets.push(this.pet)
+		this.pet = {}
+])
+```
+
 
 ### Resources
 
