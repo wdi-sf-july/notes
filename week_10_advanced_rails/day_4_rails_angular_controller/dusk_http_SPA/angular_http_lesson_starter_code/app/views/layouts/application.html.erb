@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AngularBook</title>
+  <%= stylesheet_link_tag    "application", media: "all"%>
+  <%= javascript_include_tag "application"%>
+  <%= csrf_meta_tags %>
+</head>
+<body ng-app="BookApp">
+
+<!-- use this when rendering pages with the angular router -->
+  <div ng-view>
+
+  </div>
+
+</body>
+</html>
