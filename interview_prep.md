@@ -78,6 +78,8 @@ This should seed your Programming Language review
 * Synchronous
 * Asynchronous
 * Concurrent
+* process
+	* thread 
 * Separation of Concerns
 * Abstraction Principle 
 * Memory

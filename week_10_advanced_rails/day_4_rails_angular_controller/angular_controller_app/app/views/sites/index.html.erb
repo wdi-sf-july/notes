@@ -1,0 +1,15 @@
+<div ng-controller="PersonCtrl">
+   <form ng-submit="handleSubmit(person)">
+    <div>
+      <input ng-model="person.firstName">
+    </div>
+    <div>
+      <input ng-model="person.lastName">
+    </div>
+    <button>Save</button>
+  </form>
+
+  <div ng-repeat="person in people">
+    {{ person.firstName }} {{person.lastName}}
+  </div>
+</div>
