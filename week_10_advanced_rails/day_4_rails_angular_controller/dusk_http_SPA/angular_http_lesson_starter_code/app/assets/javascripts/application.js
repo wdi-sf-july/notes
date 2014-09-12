@@ -14,5 +14,8 @@
 //= require jquery_ujs
 //= require angular.min
 //= require angular-route.min
+//= require angular-rails-templates
 //= require_tree .
+//= require_tree ../templates
+
 

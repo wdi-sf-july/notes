@@ -1,0 +1,45 @@
+<h1>Book App</h1>
+
+<h3>One way binding</h3>
+{{name}}
+{{age}}
+
+<input type="text" ng-model="typing">
+<h2>{{typing}}</h2>
+
+
+<!-- CREATE -->
+<form action="javascript:void(0);" ng-submit="addBook()">
+	<input type="text" ng-model = "newBook.title"placeholder ="Title" autofocus required>
+	<input type="text" ng-model ="newBook.author"placeholder ="Author" required>
+	<input type="text" ng-model = "newBook.description"placeholder ="Description">
+	<button>Add Book</button>
+</form>
+
+<!-- SHOW -->
+<ul ng-repeat = "book in books | orderBy: 'author'" >
+	<p> Book #{{book.id}}
+		<li>Title - {{book.title}}</li>
+		<li>Author - {{book.author}}</li>
+		<li>Description - {{book.description}}</li>
+	</p>
+	<!-- DELETE -->
+	<button ng-click ="deleteBook(book)">Delete</button>
+
+	<input type="checkbox" ng-model ="checked" id ="editing{{$index}}"><label for ="editing{{$index}}">Edit</label>
+
+	<!-- UPDATE -->
+	<form ng-submit = "editBook(book)" ng-show="checked">
+		<input type="text" ng-model="book.title">
+		<input type="text" ng-model="book.author">
+		<input type="text" ng-model="book.description">
+		<button>Edit Book</button>
+	</form>
+</ul>
+
+
+
+
+
+
+
